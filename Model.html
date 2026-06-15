@@ -75,7 +75,7 @@
     <h1>Models to Know</h1>
     <div class="date">Monday, 15 June 2026 &middot; 9:00 AM</div>
     <div class="readtime">⏱ Quick scan &middot; new in the last 30 days + current leaders</div>
-    <div class="nav"><a href="AI-Briefing-2026-06-15.html">← Back to today's briefing</a></div>
+    <div class="nav"><a href="index.html">← Back to the feed</a></div>
   </header>
 
   <div class="first">
@@ -87,6 +87,7 @@
     </ul>
   </div>
 
+  <div id="read-controls"></div>
   <section>
     <div class="sec-head"><span class="dot" style="background:var(--accent)"></span><h2>🆕 New in the Last 30 Days</h2></div>
     <p class="sub">Models launched recently and worth knowing.</p>
@@ -95,31 +96,31 @@
         <tr><th>Model</th><th>Best for</th><th>Type</th><th>Run it yourself?</th></tr>
       </thead>
       <tbody>
-        <tr>
+        <tr class="readable" data-id="model-1">
           <td data-l="Model"><b>Claude Opus 4.8</b><span class="maker">Anthropic</span></td>
           <td data-l="Best for">Top coding &amp; step-by-step reasoning</td>
           <td data-l="Type"><span class="pill closed">Closed</span></td>
           <td data-l="Run it yourself?"><span class="local-no">No</span><span class="hw">Online only (app / API)</span></td>
         </tr>
-        <tr>
+        <tr class="readable" data-id="model-2">
           <td data-l="Model"><b>Gemini 3.5 Pro</b><span class="maker">Google</span></td>
           <td data-l="Best for">Very long documents, images &amp; video</td>
           <td data-l="Type"><span class="pill closed">Closed</span></td>
           <td data-l="Run it yourself?"><span class="local-no">No</span><span class="hw">Online only (app / API)</span></td>
         </tr>
-        <tr>
+        <tr class="readable" data-id="model-3">
           <td data-l="Model"><b>MAI models (7 new)</b><span class="maker">Microsoft</span></td>
           <td data-l="Best for">General use inside Microsoft products</td>
           <td data-l="Type"><span class="pill closed">Closed</span></td>
           <td data-l="Run it yourself?"><span class="local-no">No</span><span class="hw">Online only</span></td>
         </tr>
-        <tr>
+        <tr class="readable" data-id="model-4">
           <td data-l="Model"><b>Phi-4 (vision, 15B)</b><span class="maker">Microsoft</span></td>
           <td data-l="Best for">Maths/science reasoning + reading images, lightweight</td>
           <td data-l="Type"><span class="pill open">Open</span></td>
           <td data-l="Run it yourself?"><span class="local-yes">Yes</span><span class="hw">Ollama / Hugging Face · needs ~12–16GB GPU</span></td>
         </tr>
-        <tr>
+        <tr class="readable" data-id="model-5">
           <td data-l="Model"><b>MiniMax M3</b><span class="maker">MiniMax</span></td>
           <td data-l="Best for">Cheap, fast, very long inputs</td>
           <td data-l="Type"><span class="pill open">Open</span></td>
@@ -137,37 +138,37 @@
         <tr><th>Model</th><th>Strong at</th><th>Type</th><th>Run it yourself?</th></tr>
       </thead>
       <tbody>
-        <tr>
+        <tr class="readable" data-id="model-6">
           <td data-l="Model"><b>Claude Opus 4.x</b><span class="maker">Anthropic</span></td>
           <td data-l="Strong at">Coding, reasoning, agent tasks</td>
           <td data-l="Type"><span class="pill closed">Closed</span></td>
           <td data-l="Run it yourself?"><span class="local-no">No</span></td>
         </tr>
-        <tr>
+        <tr class="readable" data-id="model-7">
           <td data-l="Model"><b>GPT-5 family</b><span class="maker">OpenAI</span></td>
           <td data-l="Strong at">All-round quality, wide ecosystem</td>
           <td data-l="Type"><span class="pill closed">Closed</span></td>
           <td data-l="Run it yourself?"><span class="local-no">No</span></td>
         </tr>
-        <tr>
+        <tr class="readable" data-id="model-8">
           <td data-l="Model"><b>Gemini 3 Pro</b><span class="maker">Google</span></td>
           <td data-l="Strong at">Long context, images &amp; video</td>
           <td data-l="Type"><span class="pill closed">Closed</span></td>
           <td data-l="Run it yourself?"><span class="local-no">No</span></td>
         </tr>
-        <tr>
+        <tr class="readable" data-id="model-9">
           <td data-l="Model"><b>Grok 4</b><span class="maker">xAI</span></td>
           <td data-l="Strong at">Real-time info, reasoning</td>
           <td data-l="Type"><span class="pill closed">Closed</span></td>
           <td data-l="Run it yourself?"><span class="local-no">No</span></td>
         </tr>
-        <tr>
+        <tr class="readable" data-id="model-10">
           <td data-l="Model"><b>DeepSeek V3 / R1</b><span class="maker">DeepSeek</span></td>
           <td data-l="Strong at">Strong reasoning at low cost</td>
           <td data-l="Type"><span class="pill open">Open</span></td>
           <td data-l="Run it yourself?"><span class="local-yes">Yes</span><span class="hw">Big — needs multiple GPUs (or a smaller quantized version)</span></td>
         </tr>
-        <tr>
+        <tr class="readable" data-id="model-11">
           <td data-l="Model"><b>Qwen 3.6 (27B)</b><span class="maker">Alibaba</span></td>
           <td data-l="Strong at">Best all-rounder you can run at home</td>
           <td data-l="Type"><span class="pill open">Open</span></td>
@@ -185,22 +186,22 @@
         <tr><th>Model</th><th>What you need</th><th>How to get it</th></tr>
       </thead>
       <tbody>
-        <tr>
+        <tr class="readable" data-id="model-12">
           <td data-l="Model"><b>Gemma 4 (E4B)</b><span class="maker">Google · open</span></td>
           <td data-l="What you need">~6GB GPU — runs on a good laptop</td>
           <td data-l="How to get it"><code>ollama pull gemma4:e4b</code></td>
         </tr>
-        <tr>
+        <tr class="readable" data-id="model-13">
           <td data-l="Model"><b>gpt-oss 20B</b><span class="maker">OpenAI · open</span></td>
           <td data-l="What you need">~16GB memory</td>
           <td data-l="How to get it"><code>ollama pull gpt-oss:20b</code></td>
         </tr>
-        <tr>
+        <tr class="readable" data-id="model-14">
           <td data-l="Model"><b>Qwen 3.6 27B</b><span class="maker">Alibaba · open</span></td>
           <td data-l="What you need">~24GB GPU — best quality at home</td>
           <td data-l="How to get it"><code>ollama pull qwen3.6:27b</code></td>
         </tr>
-        <tr>
+        <tr class="readable" data-id="model-15">
           <td data-l="Model"><b>gpt-oss 120B</b><span class="maker">OpenAI · open</span></td>
           <td data-l="What you need">~80GB — server / workstation class</td>
           <td data-l="How to get it"><code>ollama pull gpt-oss:120b</code></td>
@@ -225,5 +226,6 @@
   </footer>
 
 </div>
+<script src="read-controls.js"></script>
 </body>
 </html>

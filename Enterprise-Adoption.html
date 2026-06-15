@@ -70,7 +70,7 @@
     <h1>Directions You Might Be Missing</h1>
     <div class="date">Monday, 15 June 2026 &middot; 9:00 AM</div>
     <div class="readtime">⏱ Quick scan &middot; where the world is going beyond the basics</div>
-    <div class="nav"><a href="AI-Briefing-2026-06-15.html">← Back to today's briefing</a></div>
+    <div class="nav"><a href="index.html">← Back to the feed</a></div>
   </header>
 
   <div class="first">
@@ -83,53 +83,54 @@
     </ul>
   </div>
 
+  <div id="read-controls"></div>
   <section>
     <div class="sec-head"><span class="dot" style="background:var(--accent)"></span><h2>📡 The Radar — directions to watch</h2></div>
     <p class="sub">Each: what it is, who's doing it, and why it matters to you.</p>
 
-    <div class="radar">
+    <div class="radar readable" data-id="ent-1">
       <p class="rt">Agents that talk to each other (A2A) <span class="new">NEW LAYER</span></p>
       <p class="what">An open standard lets agents built by different vendors discover and call one another — forming an "agent mesh," with registries that act like a directory of approved agents.</p>
       <p class="who">Who: A2A protocol (now under the Linux Foundation) — 150+ organisations, live across Google, Microsoft, AWS; used in finance, insurance, supply chain.</p>
       <span class="miss"><b>Why it matters to you:</b> MCP gateways connect agents to <i>tools</i>; A2A connects agents to <i>other agents</i>. That's the next plumbing layer — easy to miss if you stopped at MCP. <a class="src" href="https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year">source</a></span>
     </div>
 
-    <div class="radar">
+    <div class="radar readable" data-id="ent-2">
       <p class="rt">Agentic core-banking, not chatbots</p>
       <p class="what">Agents that run whole back-office chains: spot a suspicious transaction → cross-check fraud patterns → check the rulebook → draft the compliance report → route it to the right officer, logging every step.</p>
       <p class="who">Who: HSBC, Citi, UBS, DBS, ING — reported 20–40% cost cuts and 10–30% revenue uplift in these workflows.</p>
       <span class="miss"><b>Why it matters to you:</b> the real money is in autonomous operations (fraud, KYC, reconciliation, regulatory reporting), not customer chat. <a class="src" href="https://beam.ai/agentic-insights/ai-agents-banking-2026-beyond-chatbots">source</a></span>
     </div>
 
-    <div class="radar">
+    <div class="radar readable" data-id="ent-3">
       <p class="rt">Gulf sovereign, Arabic-first models <span class="new">YOUR REGION</span></p>
       <p class="what">Home-grown large models built for Arabic (formal + Gulf/Levantine dialects), not just translated Western models.</p>
       <p class="who">Who: Falcon Arabic &amp; Falcon-H1 (TII, UAE); Jais (G42 / MBZUAI / Cerebras); Saudi PIF's HUMAIN.</p>
       <span class="miss"><b>Why it matters to you:</b> a FAB-relevant path — regional, compliant, dialect-aware models for local banking instead of depending only on US labs. <a class="src" href="https://falconllm.tii.ae/falcon-arabic.html">source</a></span>
     </div>
 
-    <div class="radar">
+    <div class="radar readable" data-id="ent-4">
       <p class="rt">India's consent-based data rails + AI</p>
       <p class="what">A national "Account Aggregator" network lets customers share bank/tax/insurance data with consent; AI then underwrites loans on this richer, permissioned data.</p>
       <p class="who">Who: Indian banks/lenders — reportedly 15–25% better default prediction; 90%+ coverage expected by 2027.</p>
       <span class="miss"><b>Why it matters to you:</b> a different model — shared data infrastructure feeding AI — that the Gulf and others may copy. Watch it as a template, not just a local story. <a class="src" href="https://www.oplinnovate.com/blogs/indias-lending-infrastructure-apis-data-aggregators-ai-models.html">source</a></span>
     </div>
 
-    <div class="radar">
+    <div class="radar readable" data-id="ent-5">
       <p class="rt">"Human-on-the-loop" (not in-the-loop)</p>
       <p class="what">A shift in posture: agents run on their own, people supervise via dashboards and alerts, stepping in only for exceptions — rather than approving every single step.</p>
       <p class="who">Who: emerging across enterprise agent platforms as the default oversight model.</p>
       <span class="miss"><b>Why it matters to you:</b> it changes the operating model and the org chart — fewer approvers, more monitors. A governance mindset shift, not a tool. <a class="src" href="https://bytebridge.medium.com/from-human-in-the-loop-to-human-on-the-loop-evolving-ai-agent-autonomy-c0ae62c3bf91">source</a></span>
     </div>
 
-    <div class="radar">
+    <div class="radar readable" data-id="ent-6">
       <p class="rt">The "AI factory" operating model</p>
       <p class="what">A repeatable, full-stack setup (data + infrastructure + governance + workflow) so the firm ships many AI use-cases the same controlled way — sold as a package now.</p>
       <p class="who">Who: NTT DATA + NVIDIA "AI factories", IBM's AI operating-model blueprint. Yet only ~12% of firms have redesigned workflows at scale.</p>
       <span class="miss"><b>Why it matters to you:</b> the winners treat AI as an operating-model redesign, not a pile of pilots. The gap between leaders and laggards is widening here. <a class="src" href="https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens">source</a></span>
     </div>
 
-    <div class="radar">
+    <div class="radar readable" data-id="ent-7">
       <p class="rt">The counter-trend: agent rollbacks ⚠️</p>
       <p class="what">After the rush, many firms are pausing, trimming or quietly dropping agents once cost, risk and unclear value get scrutinised.</p>
       <p class="who">Who: reported across enterprises (one widely-cited figure: ~74% rolling back some agents after launch).</p>
@@ -151,5 +152,6 @@
   </footer>
 
 </div>
+<script src="read-controls.js"></script>
 </body>
 </html>

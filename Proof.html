@@ -64,7 +64,7 @@
     <div class="date">Monday, 15 June 2026 &middot; 9:00 AM</div>
     <div class="readtime">⏱ Quick scan &middot; real journeys with real numbers</div>
     <div class="nav">
-      <a class="b1" href="AI-Briefing-2026-06-15.html">← Back to briefing</a>
+      <a class="b1" href="index.html">← Back to the feed</a>
       <a class="b2" href="Enterprise-Adoption.html">📡 Directions radar →</a>
     </div>
   </header>
@@ -78,11 +78,12 @@
     </ul>
   </div>
 
+  <div id="read-controls"></div>
   <section>
     <div class="sec-head"><span class="dot"></span><h2>🏦 Real Journeys</h2></div>
     <p class="sub">Each story: what they adopted, the pain before, how they fixed it, the payoff, and what's next.</p>
 
-    <div class="case">
+    <div class="case readable" data-id="proof-1">
       <h3>JPMorgan Chase</h3>
       <div class="firmtag">Largest US bank &middot; biggest AI program in banking</div>
       <div class="row"><div class="lbl adopt">Adopted</div><div class="val">In-house AI assistant ("LLM Suite"), 450+ use cases, 2,000+ AI specialists.</div></div>
@@ -93,7 +94,7 @@
         <a class="src" href="https://digitaldefynd.com/IQ/jp-morgan-using-ai-case-study/">source</a></div></div>
     </div>
 
-    <div class="case">
+    <div class="case readable" data-id="proof-2">
       <h3>Bank of America</h3>
       <div class="firmtag">Consumer banking at massive scale</div>
       <div class="row"><div class="lbl adopt">Adopted</div><div class="val">"Erica" customer assistant + AI tools for nearly all employees.</div></div>
@@ -104,7 +105,7 @@
         <a class="src" href="https://www.articsledge.com/post/ai-banking">source</a></div></div>
     </div>
 
-    <div class="case">
+    <div class="case readable" data-id="proof-3">
       <h3>Goldman Sachs</h3>
       <div class="firmtag">Investment banking &middot; developer productivity</div>
       <div class="row"><div class="lbl adopt">Adopted</div><div class="val">AI coding agent ("Devin") + firmwide generative-AI tools.</div></div>
@@ -115,7 +116,7 @@
         <a class="src" href="https://lucidate.substack.com/p/goldman-sachs-scales-ai-coding-to">source</a></div></div>
     </div>
 
-    <div class="case">
+    <div class="case readable" data-id="proof-4">
       <h3>Citi &amp; DBS Bank</h3>
       <div class="firmtag">Two more banks, two clear plays</div>
       <div class="row"><div class="lbl adopt">Adopted</div><div class="val"><b>Citi:</b> agents auto-handle software patches &amp; upgrades. <b>DBS:</b> AI across customer + operations.</div></div>
@@ -125,7 +126,7 @@
         <a class="src" href="https://www.ciodive.com/news/banking-ai-research-jpmorganchase-citi-rbc-wells-fargo/760901/">source</a></div></div>
     </div>
 
-    <div class="case">
+    <div class="case readable" data-id="proof-5">
       <h3>Accenture <span style="font-size:12px;color:var(--muted);font-weight:400;">(cross-industry example)</span></h3>
       <div class="firmtag">How a non-bank scaled the same approach</div>
       <div class="row"><div class="lbl adopt">Adopted</div><div class="val">Microsoft Copilot across ~200,000 employees — the largest known enterprise deployment.</div></div>
@@ -141,5 +142,6 @@
   </footer>
 
 </div>
+<script src="read-controls.js"></script>
 </body>
 </html>
