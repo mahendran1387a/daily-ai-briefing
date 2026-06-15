@@ -3,104 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily AI Briefing — Running Feed</title>
-<style>
-  :root{--bg:#0e1117;--card:#161b22;--line:#2a3038;--ink:#e6edf3;--muted:#9aa7b4;
-        --accent:#3b82f6;--accent2:#22c55e;--chip:#1f2733;--gold:#eab308;--amber:#f59e0b;--purple:#a855f7;}
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.55;
-       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
-  .wrap{max-width:780px;margin:0 auto;padding:30px 20px 60px;}
-  header{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:6px;}
-  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;}
-  h1{font-size:24px;margin:6px 0 4px;font-weight:800;}
-  .sub{color:var(--muted);font-size:13.5px;}
-  .nav{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;}
-  .nav a{display:inline-block;text-decoration:none;font-size:13px;font-weight:600;padding:7px 14px;border-radius:8px;}
-  .nav a.m{background:var(--accent);color:#fff;} .nav a.e{background:var(--accent2);color:#0b140d;font-weight:700;} .nav a.p{background:var(--gold);color:#0b0e14;font-weight:700;} .nav a.t{background:var(--purple);color:#fff;}
-  .controls{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:18px 0 22px;padding:12px 16px;background:var(--card);border:1px solid var(--line);border-radius:10px;font-size:13.5px;}
-  .count{font-weight:700;color:#fff;}
-  .controls label{color:var(--muted);cursor:pointer;display:flex;align-items:center;gap:6px;}
-  .controls button{background:var(--chip);border:1px solid var(--line);color:var(--muted);font-size:12.5px;padding:5px 12px;border-radius:8px;cursor:pointer;}
-  .controls button:hover{color:#fff;border-color:var(--muted);}
-  .daygroup{margin-bottom:26px;}
-  .dayhdr{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;border-left:3px solid var(--accent);padding-left:10px;}
-  .item{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 16px;margin-bottom:11px;position:relative;transition:opacity .25s,transform .25s;}
-  .item.read{opacity:.45;}
-  .tagrow{display:flex;align-items:center;gap:8px;margin-bottom:5px;flex-wrap:wrap;}
-  .cat{font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;}
-  .it{font-size:16px;font-weight:700;color:#fff;margin:2px 0 4px;}
-  .sm{font-size:14px;margin:0 0 8px;}
-  .src{color:var(--muted);font-size:12.5px;text-decoration:none;border-bottom:1px dotted var(--muted);}
-  .src:hover{color:var(--accent);}
-  .act{display:inline-block;margin-left:10px;font-size:12.5px;font-weight:600;padding:4px 12px;border-radius:7px;border:1px solid var(--line);background:var(--chip);color:var(--accent2);cursor:pointer;}
-  .act:hover{border-color:var(--accent2);}
-  .item.read .act{color:var(--muted);}
-  .empty{color:var(--muted);text-align:center;padding:40px 0;font-size:14px;}
-  footer{border-top:1px solid var(--line);margin-top:30px;padding-top:14px;color:var(--muted);font-size:12.5px;}
-  @media(max-width:600px){h1{font-size:21px;}.wrap{padding:22px 14px 48px;}}
-</style>
+<title>Daily AI Briefing — The Feed</title>
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="kicker">Daily AI Briefing · For Mahendran</div>
-    <h1>Your running AI feed</h1>
-    <div class="sub">New items added every Mon / Wed / Fri · tick off what you've read</div>
-    <div class="nav">
-      <a class="m" href="Model.html">🧠 Models</a>
-      <a class="e" href="Enterprise-Adoption.html">🏢 Enterprise Adoption</a>
-      <a class="p" href="Proof.html">📂 Who's Scaling AI</a>
-      <a class="t" href="Tech-Stack.html">🧩 Tech in Use</a>
+<div class="page">
+  <header class="masthead">
+    <div class="mast-top">
+      <div class="brand">
+        <div class="eyebrow">Daily AI Briefing · For Mahendran</div>
+        <h1 class="mast-title">What you need to know in AI</h1>
+        <div class="mast-meta">A running feed · new items Mon / Wed / Fri · tick off what you've read</div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">☾</button>
     </div>
+    <nav class="tabs">
+      <a class="tab active" href="index.html">Feed</a>
+      <a class="tab" href="Model.html">Models</a>
+      <a class="tab" href="Enterprise-Adoption.html">Directions</a>
+      <a class="tab" href="Proof.html">Proof</a>
+      <a class="tab" href="Tech-Stack.html">Tech in Use</a>
+    </nav>
   </header>
 
-  <div class="controls">
-    <span class="count" id="count">—</span>
-    <label><input type="checkbox" id="showRead"> Show read items</label>
-    <button id="reset">↺ Reset all to unread</button>
+  <div class="rc-bar">
+    <span class="rc-count" id="count">—</span>
+    <label><input type="checkbox" id="showRead"> Show read</label>
+    <button id="reset">↺ Reset all</button>
   </div>
 
   <div id="list"></div>
 
-  <footer>
-    Tip: "Mark read" is remembered in this browser (so phone and laptop track separately). Newest items first, last 30 days.
+  <footer class="foot">
+    "Mark read" is remembered in this browser (phone and laptop track separately). Newest first · rolling 30 days · sources linked on each item.
   </footer>
 </div>
 
 <script src="feed.js"></script>
 <script>
-  var CATCOLOR={"Top AI News":"var(--accent)","Enterprise & Banking AI":"var(--accent2)","UAE & Middle East":"var(--amber)","Worth a Glance":"var(--purple)"};
-  var CATTEXT={"Top AI News":"#fff","Enterprise & Banking AI":"#0b140d","UAE & Middle East":"#0b0e14","Worth a Glance":"#fff"};
+  var EY={"Top AI News":"cat-news","Enterprise & Banking AI":"cat-bank","UAE & Middle East":"cat-region","Worth a Glance":"cat-glance"};
   var KEY="briefing_read_ids";
   function readSet(){try{return new Set(JSON.parse(localStorage.getItem(KEY)||"[]"));}catch(e){return new Set();}}
-  function saveSet(s){localStorage.setItem(KEY,JSON.stringify([...s]));}
-  function fmtDate(d){var p=d.split("-");var m=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];return parseInt(p[2])+" "+m[parseInt(p[1])-1]+" "+p[0];}
+  function saveSet(s){localStorage.setItem(KEY,JSON.stringify(Array.from(s)));}
+  function fmt(d){var p=d.split("-"),m=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];return parseInt(p[2])+" "+m[parseInt(p[1])-1]+" "+p[0];}
+  function esc(t){var e=document.createElement("div");e.textContent=t;return e.innerHTML;}
   function render(){
     var feed=(window.FEED||[]).slice().sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0;});
-    var read=readSet();
-    var showRead=document.getElementById("showRead").checked;
-    var list=document.getElementById("list");
-    var unread=feed.filter(function(i){return !read.has(i.id);}).length;
-    document.getElementById("count").textContent=unread+" unread"+(read.size?(" · "+read.size+" read"):"");
+    var read=readSet(), showRead=document.getElementById("showRead").checked, list=document.getElementById("list");
+    document.getElementById("count").textContent=feed.filter(function(i){return !read.has(i.id);}).length+" unread"+(read.size?(" · "+read.size+" read"):"");
     var shown=feed.filter(function(i){return showRead||!read.has(i.id);});
     if(!shown.length){list.innerHTML='<div class="empty">🎉 All caught up — nothing unread.</div>';return;}
     var html="",lastDay="";
     shown.forEach(function(i){
-      if(i.date!==lastDay){if(lastDay)html+="</div>";html+='<div class="daygroup"><div class="dayhdr">'+fmtDate(i.date)+'</div>';lastDay=i.date;}
-      var isRead=read.has(i.id);
-      var col=CATCOLOR[i.cat]||"var(--muted)",tc=CATTEXT[i.cat]||"#fff";
-      html+='<div class="item'+(isRead?' read':'')+'" data-id="'+i.id+'">'+
-        '<div class="tagrow"><span class="cat" style="background:'+col+';color:'+tc+'">'+i.cat+'</span></div>'+
-        '<div class="it">'+i.title+'</div>'+
-        '<div class="sm">'+i.summary+(i.url?' <a class="src" href="'+i.url+'" target="_blank" rel="noopener">'+(i.src||'source')+'</a>':'')+
-        '<span class="act" data-act="'+i.id+'">'+(isRead?'↺ Mark unread':'✓ Mark read')+'</span></div>'+
-      '</div>';
+      if(i.date!==lastDay){if(lastDay)html+="</div>";html+='<div class="daygroup"><div class="dayhdr">'+fmt(i.date)+'</div>';lastDay=i.date;}
+      var isRead=read.has(i.id), ey=EY[i.cat]||"cat-news";
+      html+='<article class="card readable'+(isRead?' is-read':'')+'" data-id="'+i.id+'">'
+        +'<div class="item-eyebrow '+ey+'">'+esc(i.cat)+'</div>'
+        +'<h3 class="item-title">'+esc(i.title)+'</h3>'
+        +'<p class="item-summary">'+esc(i.summary)+'</p>'
+        +'<div class="item-meta">'
+        +(i.url?'<a class="src" href="'+i.url+'" target="_blank" rel="noopener">'+esc(i.src||"source")+'</a>':'<span>'+esc(i.src||"")+'</span>')
+        +'<span class="rc-btn" data-act="'+i.id+'">'+(isRead?"↺ Unread":"✓ Mark read")+'</span>'
+        +'</div></article>';
     });
     if(lastDay)html+="</div>";
     list.innerHTML=html;
-    Array.prototype.forEach.call(document.querySelectorAll(".act"),function(b){
-      b.addEventListener("click",function(){var id=b.getAttribute("data-act");var s=readSet();if(s.has(id))s.delete(id);else s.add(id);saveSet(s);render();});
+    Array.prototype.forEach.call(document.querySelectorAll(".rc-btn[data-act]"),function(b){
+      b.addEventListener("click",function(){var id=b.getAttribute("data-act"),s=readSet();if(s.has(id))s.delete(id);else s.add(id);saveSet(s);render();});
     });
   }
   document.getElementById("showRead").addEventListener("change",render);

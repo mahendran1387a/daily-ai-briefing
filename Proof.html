@@ -3,122 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proof — Who's Actually Scaling AI</title>
-<style>
-  :root{--bg:#0e1117;--card:#161b22;--line:#2a3038;--ink:#e6edf3;--muted:#9aa7b4;--accent:#3b82f6;--accent2:#22c55e;--chip:#1f2733;--gold:#eab308;--amber:#f59e0b;--purple:#a855f7;}
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.6;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
-  .wrap{max-width:840px;margin:0 auto;padding:34px 22px 64px;}
-  header{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:8px;}
-  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;}
-  h1{font-size:25px;margin:6px 0 4px;font-weight:800;}
-  .date{color:var(--muted);font-size:14px;}
-  .readtime{display:inline-block;margin-top:8px;font-size:12px;color:var(--muted);background:var(--chip);border:1px solid var(--line);padding:3px 10px;border-radius:20px;}
-  .nav{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;}
-  .nav a{display:inline-block;text-decoration:none;font-size:13px;font-weight:600;padding:7px 14px;border-radius:8px;}
-  .nav a.b1{background:var(--accent);color:#fff;} .nav a.b2{background:var(--accent2);color:#0b140d;font-weight:700;}
-  .first{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:16px 20px;margin:24px 0 22px;}
-  .first h2{margin:0 0 10px;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--gold);}
-  .first ul{margin:0;padding-left:20px;} .first li{margin:8px 0;font-size:15px;} .first li b{color:#fff;}
-  section{margin-bottom:30px;}
-  .sec-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;}
-  .dot{width:10px;height:10px;border-radius:50%;background:var(--gold);flex:0 0 auto;}
-  .sec-head h2{font-size:18px;margin:0;font-weight:700;}
-  .sub{color:var(--muted);font-size:13px;margin:0 0 14px;}
-  .case{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px;}
-  .case h3{margin:0 0 2px;font-size:16.5px;color:#fff;}
-  .case .firmtag{color:var(--muted);font-size:12px;margin-bottom:10px;}
-  .row{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:7px 0;border-top:1px solid var(--line);font-size:14px;}
-  .row:first-of-type{border-top:none;}
-  .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);padding-top:2px;}
-  .lbl.built{color:#60a5fa;} .lbl.how{color:#fbbf24;} .lbl.res{color:#4ade80;} .lbl.catch{color:#f87171;} .lbl.next{color:#c084fc;}
-  .val b{color:#fff;}
-  .src{color:var(--muted);font-size:12px;text-decoration:none;border-bottom:1px dotted var(--muted);}
-  .src:hover{color:var(--accent);}
-  footer{border-top:1px solid var(--line);margin-top:30px;padding-top:14px;color:var(--muted);font-size:12.5px;}
-  a{color:var(--accent);}
-  @media(max-width:600px){h1{font-size:21px;}.wrap{padding:24px 15px 48px;}.row{grid-template-columns:92px 1fr;}}
-</style>
+<title>Who's Actually Scaling AI — Daily AI Briefing</title>
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="kicker">Daily AI Briefing · Proof</div>
-    <h1>Who's Actually Scaling AI</h1>
-    <div class="date">Monday, 15 June 2026 · 9:00 AM</div>
-    <div class="readtime">⏱ Real deployments · the system, the numbers, the honest catch</div>
-    <div class="nav">
-      <a class="b1" href="index.html">← Back to the feed</a>
-      <a class="b2" href="Enterprise-Adoption.html">📡 Directions radar →</a>
+<div class="page">
+  <header class="masthead">
+    <div class="mast-top">
+      <div class="brand">
+        <div class="eyebrow">Daily AI Briefing · Proof</div>
+        <h1 class="mast-title">Who's Actually Scaling AI</h1>
+        <div class="mast-meta">Real deployments — the system, the numbers, the honest catch</div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">☾</button>
     </div>
+    <nav class="tabs">
+      <a class="tab" href="index.html">Feed</a>
+      <a class="tab" href="Model.html">Models</a>
+      <a class="tab" href="Enterprise-Adoption.html">Directions</a>
+      <a class="tab active" href="Proof.html">Proof</a>
+      <a class="tab" href="Tech-Stack.html">Tech in Use</a>
+    </nav>
   </header>
 
-  <div class="first">
-    <h2>⚡ Read This First</h2>
+  <div class="lead">
+    <h2>⚡ Read this first</h2>
     <ul>
-      <li><b>This is evidence, not logos</b> — each entry has the actual system, how it works, a hard number, and the honest limitation.</li>
-      <li><b>The pattern that works:</b> wire AI into your own data behind the firewall, target one painful workflow, measure it.</li>
-      <li><b>The cautionary tale:</b> Klarna over-rotated to AI-only support, quality dropped, and it rehired humans for complex cases — speed isn't everything.</li>
+      <li><b>Evidence, not logos</b> — each entry has the actual system, how it works, a hard number, and the honest limitation.</li>
+      <li><b>What works:</b> wire AI into your own data behind the firewall, target one painful workflow, measure it.</li>
+      <li><b>The cautionary tale:</b> Klarna over-rotated to AI-only support, quality dropped, and it rehired humans — speed isn't everything.</li>
     </ul>
   </div>
 
   <div id="read-controls"></div>
 
-  <section>
-    <div class="sec-head"><span class="dot"></span><h2>🏦 Real Deployments</h2></div>
-    <p class="sub">What they built · how it works · the results · the honest catch · what's next.</p>
+  <section class="section">
+    <article class="card readable" data-id="proof-jpmorgan-llmsuite">
+      <h3 class="case-title">JPMorgan Chase — "LLM Suite"</h3>
+      <div class="case-tag">Firm-wide AI assistant · launched 2024, scaled through 2026</div>
+      <div class="row"><div class="row-label rl-built">Built</div><div class="row-val">A <b>model-agnostic</b> in-house assistant wired into the bank's own document stores, call records and knowledge graphs via secure internal APIs.</div></div>
+      <div class="row"><div class="row-label rl-how">How it works</div><div class="row-val">Routes prompts to OpenAI and Anthropic models behind the firewall; refreshed roughly every 8 weeks; opt-in rollout.</div></div>
+      <div class="row"><div class="row-label rl-res">Results</div><div class="row-val"><b>200,000 users in 8 months</b> (now 230,000+); <b>30–40% efficiency</b> gains; <b>contract review −40%</b> in commercial lending; pitch decks drafted in ~30 seconds.</div></div>
+      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val">An assistant, not autonomy — value hinges on adoption and clean internal data; underwritten by an $18B tech budget few can match.</div></div>
+      <div class="row"><div class="row-label rl-next">Next</div><div class="row-val">Toward 1,000+ use cases and more autonomous agents. <a class="src" href="https://thedigitalbanker.com/jpmorgan-chases-llm-suite-drives-ai-transformation-across-the-enterprise/">The Digital Banker</a> · <a class="src" href="https://tearsheet.co/artificial-intelligence/jpmorgan-chases-gen-ai-implementation-450-use-cases-and-lessons-learned/">Tearsheet</a></div></div>
+    </article>
 
-    <div class="case readable" data-id="proof-jpmorgan-llmsuite">
-      <h3>JPMorgan Chase — "LLM Suite"</h3>
-      <div class="firmtag">Firm-wide AI assistant · launched 2024, scaled through 2026</div>
-      <div class="row"><div class="lbl built">Built</div><div class="val">A <b>model-agnostic</b> in-house assistant wired into the bank's own document stores, call records and knowledge graphs through secure internal APIs.</div></div>
-      <div class="row"><div class="lbl how">How it works</div><div class="val">Routes prompts to OpenAI and Anthropic models behind the firewall; refreshed roughly every 8 weeks; rolled out opt-in.</div></div>
-      <div class="row"><div class="lbl res">Results</div><div class="val"><b>200,000 users in 8 months</b> (now 230,000+); staff report <b>30–40% efficiency</b> gains; <b>contract review −40%</b> in commercial lending; pitch decks drafted in ~30 seconds.</div></div>
-      <div class="row"><div class="lbl catch">The catch</div><div class="val">It's an assistant, not autonomy — value hinges on staff actually adopting it and on clean internal data; underwritten by an $18B tech budget few can match.</div></div>
-      <div class="row"><div class="lbl next">Next</div><div class="val">Toward 1,000+ use cases and more autonomous agents. <a class="src" href="https://thedigitalbanker.com/jpmorgan-chases-llm-suite-drives-ai-transformation-across-the-enterprise/">The Digital Banker</a> · <a class="src" href="https://tearsheet.co/artificial-intelligence/jpmorgan-chases-gen-ai-implementation-450-use-cases-and-lessons-learned/">Tearsheet</a></div></div>
-    </div>
+    <article class="card readable" data-id="proof-commbank-fraud">
+      <h3 class="case-title">Commonwealth Bank — agentic fraud defence</h3>
+      <div class="case-tag">Australia's largest bank · in production 2026</div>
+      <div class="row"><div class="row-label rl-built">Built</div><div class="row-val">An <b>agentic</b> system that spots emerging fraud patterns and <b>auto-writes the detection rules</b> to block them — built in-house in ~3 months.</div></div>
+      <div class="row"><div class="row-label rl-how">How it works</div><div class="row-val">Monitors <b>80M+ signals a day</b> across transactions, cards, payments and digital channels, then drafts/updates fraud rules for review.</div></div>
+      <div class="row"><div class="row-label rl-res">Results</div><div class="row-val"><b>Fraud losses down &gt;20%</b> (H1 FY26 vs FY25); ~40,000 proactive customer alerts/day; the agent contributed to <b>~75% of card-fraud rules</b>.</div></div>
+      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val">Part of a $1B/yr financial-crime program — and it runs alongside a separate ~$1B suspected loan-fraud probe; needs human rule-review.</div></div>
+      <div class="row"><div class="row-label rl-next">Next</div><div class="row-val">Extending agentic detection to more channels. <a class="src" href="https://www.commbank.com.au/articles/newsroom/2026/04/ai-agent-spots-fraud-in-real-time.html">CommBank newsroom</a> · <a class="src" href="https://www.finextra.com/newsarticle/47683/commbank-builds-ai-agent-that-spots-fraud-and-helps-build-defences">Finextra</a></div></div>
+    </article>
 
-    <div class="case readable" data-id="proof-commbank-fraud">
-      <h3>Commonwealth Bank — agentic fraud defence</h3>
-      <div class="firmtag">Australia's largest bank · in production 2026</div>
-      <div class="row"><div class="lbl built">Built</div><div class="val">An <b>agentic</b> system that spots emerging fraud/scam patterns and <b>auto-writes the detection rules</b> to block them — built in-house in about 3 months.</div></div>
-      <div class="row"><div class="lbl how">How it works</div><div class="val">Monitors <b>80M+ signals a day</b> across transactions, cards, payments and digital channels, then drafts/updates fraud rules for review.</div></div>
-      <div class="row"><div class="lbl res">Results</div><div class="val"><b>Fraud losses down &gt;20%</b> (H1 FY26 vs FY25); ~40,000 proactive customer alerts/day; the agent contributed to <b>~75% of card-fraud rules</b>.</div></div>
-      <div class="row"><div class="lbl catch">The catch</div><div class="val">Part of a $1B/yr financial-crime program — and it runs alongside a separate ~$1B suspected loan-fraud probe; scale invites scrutiny and needs human rule-review.</div></div>
-      <div class="row"><div class="lbl next">Next</div><div class="val">Extending agentic detection to more channels. <a class="src" href="https://www.commbank.com.au/articles/newsroom/2026/04/ai-agent-spots-fraud-in-real-time.html">CommBank newsroom</a> · <a class="src" href="https://www.finextra.com/newsarticle/47683/commbank-builds-ai-agent-that-spots-fraud-and-helps-build-defences">Finextra</a></div></div>
-    </div>
+    <article class="card readable" data-id="proof-klarna-reversal">
+      <h3 class="case-title">Klarna — the cautionary tale</h3>
+      <div class="case-tag">Fintech · AI-only support, then a partial reversal</div>
+      <div class="row"><div class="row-label rl-built">Built</div><div class="row-val">An OpenAI-built assistant that replaced ~<b>700</b> customer-service roles, handling chat in 35+ languages.</div></div>
+      <div class="row"><div class="row-label rl-res">Results</div><div class="row-val">Peaked at <b>~75% of chats</b> (~2.3M conversations), <b>82% faster</b> responses, 25% fewer repeat contacts.</div></div>
+      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val"><b>Quality slipped.</b> The CEO admitted Klarna "over-rotated"; by 2025 it began <b>rehiring humans</b> for premium and complex cases.</div></div>
+      <div class="row"><div class="row-label rl-next">Next</div><div class="row-val">A blended model — AI for volume, humans for premium. The lesson: measure quality, not just cost. <a class="src" href="https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396">Reuters/Bloomberg via Entrepreneur</a></div></div>
+    </article>
 
-    <div class="case readable" data-id="proof-klarna-reversal">
-      <h3>Klarna — the cautionary tale</h3>
-      <div class="firmtag">Fintech · AI-only support, then a partial reversal</div>
-      <div class="row"><div class="lbl built">Built</div><div class="val">An OpenAI-built assistant that replaced ~<b>700</b> customer-service roles, handling high-volume chat in 35+ languages.</div></div>
-      <div class="row"><div class="lbl res">Results</div><div class="val">Peaked at <b>~75% of chats</b> (~2.3M conversations), <b>82% faster</b> responses, 25% fewer repeat contacts.</div></div>
-      <div class="row"><div class="lbl catch">The catch</div><div class="val"><b>Quality slipped.</b> The CEO admitted Klarna "over-rotated" on AI; by 2025 it began <b>rehiring humans</b> for premium and complex cases.</div></div>
-      <div class="row"><div class="lbl next">Next</div><div class="val">A blended model — AI for volume, humans for premium. The lesson: measure quality, not just cost. <a class="src" href="https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396">Reuters/Bloomberg via Entrepreneur</a></div></div>
-    </div>
+    <article class="card readable" data-id="proof-goldman-devin">
+      <h3 class="case-title">Goldman Sachs — autonomous coding</h3>
+      <div class="case-tag">Investment bank · developer productivity</div>
+      <div class="row"><div class="row-label rl-built">Built</div><div class="row-val">Deploying Cognition's autonomous coding agent <b>"Devin"</b> alongside ~12,000 developers, plus firm-wide generative-AI tools.</div></div>
+      <div class="row"><div class="row-label rl-how">How it works</div><div class="row-val">Devin takes routine engineering work — upgrades, migrations, boilerplate — as a junior teammate that developers review.</div></div>
+      <div class="row"><div class="row-label rl-res">Results</div><div class="row-val"><b>~3–4x productivity expected</b> on targeted tasks (firm-stated, early-stage).</div></div>
+      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val">An expectation, not an audited outcome yet — human review still required; gains concentrate on routine work.</div></div>
+      <div class="row"><div class="row-label rl-next">Next</div><div class="row-val">Scaling "human + agent" engineering pods. <a class="src" href="https://lucidate.substack.com/p/goldman-sachs-scales-ai-coding-to">Lucidate</a></div></div>
+    </article>
 
-    <div class="case readable" data-id="proof-goldman-devin">
-      <h3>Goldman Sachs — autonomous coding</h3>
-      <div class="firmtag">Investment bank · developer productivity</div>
-      <div class="row"><div class="lbl built">Built</div><div class="val">Deploying Cognition's autonomous coding agent <b>"Devin"</b> alongside ~12,000 developers, plus firm-wide generative-AI tools.</div></div>
-      <div class="row"><div class="lbl how">How it works</div><div class="val">Devin takes routine engineering work — upgrades, migrations, boilerplate — as a junior teammate that developers review.</div></div>
-      <div class="row"><div class="lbl res">Results</div><div class="val"><b>~3–4x productivity expected</b> on targeted tasks (firm-stated, early-stage).</div></div>
-      <div class="row"><div class="lbl catch">The catch</div><div class="val">An expectation, not an audited outcome yet — human review still required, and gains concentrate on routine work, not complex design.</div></div>
-      <div class="row"><div class="lbl next">Next</div><div class="val">Scaling "human + agent" engineering pods. <a class="src" href="https://lucidate.substack.com/p/goldman-sachs-scales-ai-coding-to">Lucidate</a></div></div>
-    </div>
-
-    <div class="case readable" data-id="proof-menlo-benchmark">
-      <h3>The market reality — Menlo Ventures benchmark</h3>
-      <div class="firmtag">Survey of ~500 enterprise decision-makers · context, not a single firm</div>
-      <div class="row"><div class="lbl res">Finding</div><div class="val">Enterprise AI spend hit <b>$37B in 2025</b> (3x year-on-year). Coding/dev tools led at <b>$7.3B</b> — about half of developers now use AI daily. AI apps are now ~6% of all software spend.</div></div>
-      <div class="row"><div class="lbl catch">Why it matters</div><div class="val">Separates real budget from hype: the money is concentrating in coding, industry-specific tools and copilots — not generic ML demos.</div></div>
-      <div class="row"><div class="lbl next">Source</div><div class="val"><a class="src" href="https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/">Menlo Ventures — 2025 State of Generative AI in the Enterprise</a></div></div>
-    </div>
+    <article class="card readable" data-id="proof-menlo-benchmark">
+      <h3 class="case-title">The market reality — Menlo Ventures benchmark</h3>
+      <div class="case-tag">Survey of ~500 enterprise decision-makers · context, not a single firm</div>
+      <div class="row"><div class="row-label rl-res">Finding</div><div class="row-val">Enterprise AI spend hit <b>$37B in 2025</b> (3x year-on-year). Coding/dev tools led at <b>$7.3B</b> — about half of developers now use AI daily. AI apps are now ~6% of all software spend.</div></div>
+      <div class="row"><div class="row-label rl-catch">Why it matters</div><div class="row-val">Separates real budget from hype: money is concentrating in coding, industry-specific tools and copilots — not generic ML demos.</div></div>
+      <div class="row"><div class="row-label rl-next">Source</div><div class="row-val"><a class="src" href="https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/">Menlo Ventures — 2025 State of Generative AI in the Enterprise</a></div></div>
+    </article>
   </section>
 
-  <footer>
-    Compiled for Mahendran · Each entry: a real system, a hard metric, and the honest limitation — drawn from primary sources, top-tier press and benchmark reports (not SEO roundups). "Mark read" is remembered in this browser.
-  </footer>
+  <footer class="foot">Each entry: a real system, a hard metric, and the honest limitation — from primary sources, top-tier press and benchmark reports. "Mark read" is remembered in this browser.</footer>
 </div>
 <script src="read-controls.js"></script>
 </body>
