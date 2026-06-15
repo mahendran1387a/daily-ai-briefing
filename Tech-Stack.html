@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech in Use — Enterprise AI Stack</title>
+<style>
+  :root{--bg:#0e1117;--card:#161b22;--line:#2a3038;--ink:#e6edf3;--muted:#9aa7b4;--accent:#3b82f6;--accent2:#22c55e;--chip:#1f2733;--gold:#eab308;--amber:#f59e0b;--purple:#a855f7;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1040px;margin:0 auto;padding:30px 20px 60px;}
+  header{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px;}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);font-weight:700;}
+  h1{font-size:24px;margin:6px 0 4px;font-weight:800;}
+  .sub{color:var(--muted);font-size:13.5px;}
+  .nav{margin-top:12px;} .nav a{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:7px 14px;border-radius:8px;}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0 14px;}
+  #q{flex:1;min-width:200px;background:var(--card);border:1px solid var(--line);color:var(--ink);font-size:14px;padding:9px 13px;border-radius:9px;}
+  .filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px;}
+  .fbtn{background:var(--chip);border:1px solid var(--line);color:var(--muted);font-size:12.5px;padding:5px 12px;border-radius:20px;cursor:pointer;}
+  .fbtn:hover{color:#fff;} .fbtn.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  th{text-align:left;background:#1b2230;color:#cdd7e1;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;padding:10px 12px;border-bottom:1px solid var(--line);}
+  td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child td{border-bottom:none;} td b{color:#fff;}
+  .adopt{display:inline-block;margin-top:4px;font-size:10.5px;font-weight:700;padding:1px 8px;border-radius:20px;}
+  .adopt.wa{background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.4);}
+  .adopt.fr{background:rgba(245,158,11,.15);color:#fbbf24;border:1px solid rgba(245,158,11,.4);}
+  .filter-hidden{display:none!important;}
+  .count{color:var(--muted);font-size:12.5px;margin:6px 2px 0;}
+  footer{border-top:1px solid var(--line);margin-top:26px;padding-top:14px;color:var(--muted);font-size:12.5px;}
+  @media(max-width:760px){
+    h1{font-size:21px;} .wrap{padding:22px 14px 48px;}
+    table,thead,tbody,th,td,tr{display:block;} thead{display:none;}
+    tr{border-bottom:1px solid var(--line);padding:8px 0;} td{border:none;padding:3px 12px;}
+    td:before{content:attr(data-l);display:block;font-size:10px;text-transform:uppercase;color:var(--muted);letter-spacing:.04em;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Daily AI Briefing · Tech in Use</div>
+    <h1>Enterprise AI Stack — what's actually being used</h1>
+    <div class="sub">Widely-adopted &amp; fast-rising AI technologies across enterprises. Kept current — stale tools drop off.</div>
+    <div class="nav"><a href="index.html">← Back to the feed</a></div>
+  </header>
+
+  <div id="read-controls"></div>
+
+  <div class="toolbar">
+    <input id="q" type="text" placeholder="Search technology, vendor, use…">
+  </div>
+  <div class="filters"><button class="fbtn active" data-cat="All">All</button><button class="fbtn" data-cat="Model Platform">Model Platform</button><button class="fbtn" data-cat="Data & RAG">Data & RAG</button><button class="fbtn" data-cat="Inference/Serving">Inference/Serving</button><button class="fbtn" data-cat="Agent Platform">Agent Platform</button><button class="fbtn" data-cat="Agent Framework">Agent Framework</button><button class="fbtn" data-cat="Protocol / Standard">Protocol / Standard</button><button class="fbtn" data-cat="Dev Tool / Coding">Dev Tool / Coding</button><button class="fbtn" data-cat="Vector DB">Vector DB</button><button class="fbtn" data-cat="Search / Knowledge">Search / Knowledge</button><button class="fbtn" data-cat="Observability & Eval">Observability & Eval</button><button class="fbtn" data-cat="Governance & Security">Governance & Security</button><button class="fbtn" data-cat="Vertical / App">Vertical / App</button></div>
+  <div class="count" id="count"></div>
+
+  <table>
+    <thead><tr><th>Technology</th><th>What it does / benefit</th><th>Who builds it</th><th>Who's using it</th><th>Category</th></tr></thead>
+    <tbody>
+<tr class="readable" data-id="tech-amazon-bedrock" data-cat="Model Platform"><td data-l="Technology"><b>Amazon Bedrock</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Run and combine many AI models via one managed service.</td><td data-l="Who builds it">AWS</td><td data-l="Who's using it">AWS enterprise customers in finance, healthcare, retail</td><td data-l="Category">Model Platform</td></tr>
+<tr class="readable" data-id="tech-azure-ai-foundry" data-cat="Model Platform"><td data-l="Technology"><b>Azure AI Foundry</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Build, deploy and govern AI apps and agents on Azure.</td><td data-l="Who builds it">Microsoft</td><td data-l="Who's using it">Microsoft-native enterprises</td><td data-l="Category">Model Platform</td></tr>
+<tr class="readable" data-id="tech-google-vertex-ai" data-cat="Model Platform"><td data-l="Technology"><b>Google Vertex AI</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Train, tune and serve models; build agents (Agentspace).</td><td data-l="Who builds it">Google</td><td data-l="Who's using it">Data/ML-heavy enterprises</td><td data-l="Category">Model Platform</td></tr>
+<tr class="readable" data-id="tech-ibm-watsonx" data-cat="Model Platform"><td data-l="Technology"><b>IBM watsonx</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Governed AI built for regulated industries.</td><td data-l="Who builds it">IBM</td><td data-l="Who's using it">Banks, insurers, government</td><td data-l="Category">Model Platform</td></tr>
+<tr class="readable" data-id="tech-hugging-face" data-cat="Model Platform"><td data-l="Technology"><b>Hugging Face</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Hub for open models, datasets and tools.</td><td data-l="Who builds it">Hugging Face</td><td data-l="Who's using it">Developers and enterprises everywhere</td><td data-l="Category">Model Platform</td></tr>
+<tr class="readable" data-id="tech-snowflake-cortex" data-cat="Data & RAG"><td data-l="Technology"><b>Snowflake Cortex</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Run AI directly on your warehouse data.</td><td data-l="Who builds it">Snowflake</td><td data-l="Who's using it">Snowflake data teams</td><td data-l="Category">Data & RAG</td></tr>
+<tr class="readable" data-id="tech-databricks-mosaic-ai" data-cat="Data & RAG"><td data-l="Technology"><b>Databricks Mosaic AI</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Build and serve models on the lakehouse.</td><td data-l="Who builds it">Databricks</td><td data-l="Who's using it">Data platform enterprises</td><td data-l="Category">Data & RAG</td></tr>
+<tr class="readable" data-id="tech-nvidia-nim" data-cat="Inference/Serving"><td data-l="Technology"><b>NVIDIA NIM</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Packaged model microservices you can self-host.</td><td data-l="Who builds it">NVIDIA</td><td data-l="Who's using it">Firms self-hosting on GPUs</td><td data-l="Category">Inference/Serving</td></tr>
+<tr class="readable" data-id="tech-vllm" data-cat="Inference/Serving"><td data-l="Technology"><b>vLLM</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">High-throughput, low-cost model serving.</td><td data-l="Who builds it">UC Berkeley + community</td><td data-l="Who's using it">Teams serving open models at scale</td><td data-l="Category">Inference/Serving</td></tr>
+<tr class="readable" data-id="tech-ollama" data-cat="Inference/Serving"><td data-l="Technology"><b>Ollama</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Run open models locally with one command.</td><td data-l="Who builds it">Ollama</td><td data-l="Who's using it">Developers, on-device/edge use</td><td data-l="Category">Inference/Serving</td></tr>
+<tr class="readable" data-id="tech-together-ai-fireworks" data-cat="Inference/Serving"><td data-l="Technology"><b>Together AI / Fireworks</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Fast, cheap inference APIs for open models.</td><td data-l="Who builds it">Together AI / Fireworks</td><td data-l="Who's using it">Startups and enterprises</td><td data-l="Category">Inference/Serving</td></tr>
+<tr class="readable" data-id="tech-microsoft-copilot-studio" data-cat="Agent Platform"><td data-l="Technology"><b>Microsoft Copilot Studio</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Low-code builder for custom AI agents.</td><td data-l="Who builds it">Microsoft</td><td data-l="Who's using it">160,000+ organisations</td><td data-l="Category">Agent Platform</td></tr>
+<tr class="readable" data-id="tech-microsoft-agent-365" data-cat="Agent Platform"><td data-l="Technology"><b>Microsoft Agent 365</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Manage and govern fleets of agents like staff.</td><td data-l="Who builds it">Microsoft</td><td data-l="Who's using it">Large Microsoft 365 enterprises</td><td data-l="Category">Agent Platform</td></tr>
+<tr class="readable" data-id="tech-amazon-bedrock-agentcore" data-cat="Agent Platform"><td data-l="Technology"><b>Amazon Bedrock AgentCore</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Runtime to run production agents securely.</td><td data-l="Who builds it">AWS</td><td data-l="Who's using it">AWS agent builders</td><td data-l="Category">Agent Platform</td></tr>
+<tr class="readable" data-id="tech-google-agentspace" data-cat="Agent Platform"><td data-l="Technology"><b>Google Agentspace</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Enterprise agents plus unified work search.</td><td data-l="Who builds it">Google</td><td data-l="Who's using it">Google Workspace enterprises</td><td data-l="Category">Agent Platform</td></tr>
+<tr class="readable" data-id="tech-salesforce-agentforce" data-cat="Agent Platform"><td data-l="Technology"><b>Salesforce Agentforce</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">AI agents built into the CRM.</td><td data-l="Who builds it">Salesforce</td><td data-l="Who's using it">Salesforce customers (sales/service)</td><td data-l="Category">Agent Platform</td></tr>
+<tr class="readable" data-id="tech-servicenow-ai-agents" data-cat="Agent Platform"><td data-l="Technology"><b>ServiceNow AI Agents</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Agents across IT and enterprise workflows.</td><td data-l="Who builds it">ServiceNow</td><td data-l="Who's using it">ServiceNow enterprises</td><td data-l="Category">Agent Platform</td></tr>
+<tr class="readable" data-id="tech-langchain-langgraph" data-cat="Agent Framework"><td data-l="Technology"><b>LangChain / LangGraph</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Build and orchestrate agent workflows.</td><td data-l="Who builds it">LangChain</td><td data-l="Who's using it">Widely used; runs on Bedrock/Vertex/Foundry</td><td data-l="Category">Agent Framework</td></tr>
+<tr class="readable" data-id="tech-llamaindex" data-cat="Data & RAG"><td data-l="Technology"><b>LlamaIndex</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Data framework to connect LLMs to your data.</td><td data-l="Who builds it">LlamaIndex</td><td data-l="Who's using it">RAG builders</td><td data-l="Category">Data & RAG</td></tr>
+<tr class="readable" data-id="tech-crewai" data-cat="Agent Framework"><td data-l="Technology"><b>CrewAI</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Coordinate teams of specialised agents.</td><td data-l="Who builds it">CrewAI</td><td data-l="Who's using it">Multi-agent app builders</td><td data-l="Category">Agent Framework</td></tr>
+<tr class="readable" data-id="tech-microsoft-autogen" data-cat="Agent Framework"><td data-l="Technology"><b>Microsoft AutoGen</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Framework for multi-agent collaboration.</td><td data-l="Who builds it">Microsoft</td><td data-l="Who's using it">Research and enterprise dev teams</td><td data-l="Category">Agent Framework</td></tr>
+<tr class="readable" data-id="tech-semantic-kernel" data-cat="Agent Framework"><td data-l="Technology"><b>Semantic Kernel</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">SDK to embed AI into existing apps.</td><td data-l="Who builds it">Microsoft</td><td data-l="Who's using it">Enterprise developers</td><td data-l="Category">Agent Framework</td></tr>
+<tr class="readable" data-id="tech-openai-agents-sdk-responses-api" data-cat="Agent Framework"><td data-l="Technology"><b>OpenAI Agents SDK / Responses API</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Build agents and tool-use on OpenAI.</td><td data-l="Who builds it">OpenAI</td><td data-l="Who's using it">OpenAI API customers</td><td data-l="Category">Agent Framework</td></tr>
+<tr class="readable" data-id="tech-google-adk" data-cat="Agent Framework"><td data-l="Technology"><b>Google ADK</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Agent Development Kit to build/ship agents.</td><td data-l="Who builds it">Google</td><td data-l="Who's using it">Vertex/Agentspace developers</td><td data-l="Category">Agent Framework</td></tr>
+<tr class="readable" data-id="tech-mcp-model-context-protocol" data-cat="Protocol / Standard"><td data-l="Technology"><b>MCP (Model Context Protocol)</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Open standard to connect agents to tools and data.</td><td data-l="Who builds it">Anthropic (Linux Foundation)</td><td data-l="Who's using it">Anthropic, OpenAI, Google, Microsoft, AWS</td><td data-l="Category">Protocol / Standard</td></tr>
+<tr class="readable" data-id="tech-a2a-agent2agent" data-cat="Protocol / Standard"><td data-l="Technology"><b>A2A (Agent2Agent)</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Open standard for agents to talk to each other.</td><td data-l="Who builds it">Linux Foundation</td><td data-l="Who's using it">150+ orgs across Google/Microsoft/AWS</td><td data-l="Category">Protocol / Standard</td></tr>
+<tr class="readable" data-id="tech-github-copilot" data-cat="Dev Tool / Coding"><td data-l="Technology"><b>GitHub Copilot</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">AI pair-programmer in the editor.</td><td data-l="Who builds it">GitHub / Microsoft</td><td data-l="Who's using it">Millions of developers, most Fortune 500</td><td data-l="Category">Dev Tool / Coding</td></tr>
+<tr class="readable" data-id="tech-cursor" data-cat="Dev Tool / Coding"><td data-l="Technology"><b>Cursor</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">AI-native code editor.</td><td data-l="Who builds it">Anysphere</td><td data-l="Who's using it">Fast-growing dev adoption</td><td data-l="Category">Dev Tool / Coding</td></tr>
+<tr class="readable" data-id="tech-claude-code" data-cat="Dev Tool / Coding"><td data-l="Technology"><b>Claude Code</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Agentic coding in the terminal/IDE.</td><td data-l="Who builds it">Anthropic</td><td data-l="Who's using it">Engineering teams</td><td data-l="Category">Dev Tool / Coding</td></tr>
+<tr class="readable" data-id="tech-cognition-devin" data-cat="Dev Tool / Coding"><td data-l="Technology"><b>Cognition Devin</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Autonomous software-engineering agent.</td><td data-l="Who builds it">Cognition</td><td data-l="Who's using it">Goldman Sachs, Citi developers</td><td data-l="Category">Dev Tool / Coding</td></tr>
+<tr class="readable" data-id="tech-windsurf" data-cat="Dev Tool / Coding"><td data-l="Technology"><b>Windsurf</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">AI IDE for agent-assisted coding.</td><td data-l="Who builds it">Cognition</td><td data-l="Who's using it">Developer teams</td><td data-l="Category">Dev Tool / Coding</td></tr>
+<tr class="readable" data-id="tech-pinecone" data-cat="Vector DB"><td data-l="Technology"><b>Pinecone</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Managed vector database for retrieval.</td><td data-l="Who builds it">Pinecone</td><td data-l="Who's using it">RAG and search at scale</td><td data-l="Category">Vector DB</td></tr>
+<tr class="readable" data-id="tech-weaviate" data-cat="Vector DB"><td data-l="Technology"><b>Weaviate</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Open-source vector database with hybrid search.</td><td data-l="Who builds it">Weaviate</td><td data-l="Who's using it">Open-source RAG builders</td><td data-l="Category">Vector DB</td></tr>
+<tr class="readable" data-id="tech-milvus" data-cat="Vector DB"><td data-l="Technology"><b>Milvus</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Open-source vector database for scale.</td><td data-l="Who builds it">Zilliz</td><td data-l="Who's using it">Large-scale retrieval workloads</td><td data-l="Category">Vector DB</td></tr>
+<tr class="readable" data-id="tech-qdrant" data-cat="Vector DB"><td data-l="Technology"><b>Qdrant</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">High-performance vector database.</td><td data-l="Who builds it">Qdrant</td><td data-l="Who's using it">RAG and recommendation systems</td><td data-l="Category">Vector DB</td></tr>
+<tr class="readable" data-id="tech-chroma" data-cat="Vector DB"><td data-l="Technology"><b>Chroma</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Lightweight vector database for apps.</td><td data-l="Who builds it">Chroma</td><td data-l="Who's using it">Prototyping and small RAG apps</td><td data-l="Category">Vector DB</td></tr>
+<tr class="readable" data-id="tech-pgvector-elastic" data-cat="Vector DB"><td data-l="Technology"><b>pgvector / Elastic</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Vector search inside your existing database.</td><td data-l="Who builds it">Postgres / Elastic</td><td data-l="Who's using it">Teams reusing existing data stores</td><td data-l="Category">Vector DB</td></tr>
+<tr class="readable" data-id="tech-rag-retrieval-augmented-generation" data-cat="Data & RAG"><td data-l="Technology"><b>RAG (Retrieval-Augmented Generation)</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Ground AI answers on your own documents.</td><td data-l="Who builds it">Pattern (many vendors)</td><td data-l="Who's using it">Near-universal in enterprise AI apps</td><td data-l="Category">Data & RAG</td></tr>
+<tr class="readable" data-id="tech-graphrag" data-cat="Data & RAG"><td data-l="Technology"><b>GraphRAG</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">RAG over a knowledge graph for better recall.</td><td data-l="Who builds it">Microsoft</td><td data-l="Who's using it">Knowledge-heavy enterprises</td><td data-l="Category">Data & RAG</td></tr>
+<tr class="readable" data-id="tech-glean" data-cat="Search / Knowledge"><td data-l="Technology"><b>Glean</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Enterprise AI search and work assistant.</td><td data-l="Who builds it">Glean</td><td data-l="Who's using it">Large enterprises</td><td data-l="Category">Search / Knowledge</td></tr>
+<tr class="readable" data-id="tech-perplexity-enterprise" data-cat="Search / Knowledge"><td data-l="Technology"><b>Perplexity Enterprise</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">AI answer engine for work questions.</td><td data-l="Who builds it">Perplexity</td><td data-l="Who's using it">Knowledge workers, enterprises</td><td data-l="Category">Search / Knowledge</td></tr>
+<tr class="readable" data-id="tech-langsmith" data-cat="Observability & Eval"><td data-l="Technology"><b>LangSmith</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Trace, evaluate and monitor LLM apps.</td><td data-l="Who builds it">LangChain</td><td data-l="Who's using it">LangChain users in production</td><td data-l="Category">Observability & Eval</td></tr>
+<tr class="readable" data-id="tech-arize-phoenix" data-cat="Observability & Eval"><td data-l="Technology"><b>Arize / Phoenix</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Observability and evaluation for AI apps.</td><td data-l="Who builds it">Arize</td><td data-l="Who's using it">ML/LLM ops teams</td><td data-l="Category">Observability & Eval</td></tr>
+<tr class="readable" data-id="tech-llm-gateway-portkey-credal-kong" data-cat="Governance & Security"><td data-l="Technology"><b>LLM Gateway (Portkey/Credal/Kong)</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Central control: routing, PII, audit, cost.</td><td data-l="Who builds it">Portkey / Credal / Kong</td><td data-l="Who's using it">Enterprises governing AI access</td><td data-l="Category">Governance & Security</td></tr>
+<tr class="readable" data-id="tech-nemo-guardrails" data-cat="Governance & Security"><td data-l="Technology"><b>NeMo Guardrails</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Add safety rails around LLM behaviour.</td><td data-l="Who builds it">NVIDIA</td><td data-l="Who's using it">Regulated and safety-focused teams</td><td data-l="Category">Governance & Security</td></tr>
+<tr class="readable" data-id="tech-guardrails-ai" data-cat="Governance & Security"><td data-l="Technology"><b>Guardrails AI</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">Validate and secure LLM outputs.</td><td data-l="Who builds it">Guardrails AI</td><td data-l="Who's using it">Production LLM app teams</td><td data-l="Category">Governance & Security</td></tr>
+<tr class="readable" data-id="tech-harvey" data-cat="Vertical / App"><td data-l="Technology"><b>Harvey</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">AI assistant built for legal work.</td><td data-l="Who builds it">Harvey</td><td data-l="Who's using it">Law firms, in-house legal</td><td data-l="Category">Vertical / App</td></tr>
+<tr class="readable" data-id="tech-sierra" data-cat="Vertical / App"><td data-l="Technology"><b>Sierra</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">AI agents for customer service.</td><td data-l="Who builds it">Sierra</td><td data-l="Who's using it">Consumer brands, support teams</td><td data-l="Category">Vertical / App</td></tr>
+<tr class="readable" data-id="tech-writer" data-cat="Vertical / App"><td data-l="Technology"><b>Writer</b><br><span class="adopt wa">Widely adopted</span></td><td data-l="What it does">Enterprise platform for content and agents.</td><td data-l="Who builds it">Writer</td><td data-l="Who's using it">Large marketing/ops teams</td><td data-l="Category">Vertical / App</td></tr>
+<tr class="readable" data-id="tech-hebbia" data-cat="Vertical / App"><td data-l="Technology"><b>Hebbia</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">AI for finance and document-heavy analysis.</td><td data-l="Who builds it">Hebbia</td><td data-l="Who's using it">Asset managers, banks</td><td data-l="Category">Vertical / App</td></tr>
+<tr class="readable" data-id="tech-decagon" data-cat="Vertical / App"><td data-l="Technology"><b>Decagon</b><br><span class="adopt fr">Fast-rising</span></td><td data-l="What it does">AI agents for customer support at scale.</td><td data-l="Who builds it">Decagon</td><td data-l="Who's using it">High-volume support orgs</td><td data-l="Category">Vertical / App</td></tr>
+    </tbody>
+  </table>
+
+  <footer>Reviewed every Mon / Wed / Fri — entries are added or removed as adoption shifts. "Mark read" is remembered in this browser.</footer>
+</div>
+
+<script>
+  var rows=[].slice.call(document.querySelectorAll("tbody tr.readable"));
+  var activeCat="All";
+  function applyFilter(){
+    var q=(document.getElementById("q").value||"").toLowerCase();
+    var shown=0;
+    rows.forEach(function(r){
+      var okCat=activeCat==="All"||r.getAttribute("data-cat")===activeCat;
+      var okQ=!q||r.textContent.toLowerCase().indexOf(q)>=0;
+      var hide=!(okCat&&okQ);
+      r.classList.toggle("filter-hidden",hide);
+      if(!hide)shown++;
+    });
+    document.getElementById("count").textContent=shown+" of "+rows.length+" shown";
+  }
+  document.getElementById("q").addEventListener("input",applyFilter);
+  [].slice.call(document.querySelectorAll(".fbtn")).forEach(function(b){
+    b.addEventListener("click",function(){
+      document.querySelectorAll(".fbtn").forEach(function(x){x.classList.remove("active");});
+      b.classList.add("active"); activeCat=b.getAttribute("data-cat"); applyFilter();
+    });
+  });
+  applyFilter();
+</script>
+<script src="read-controls.js"></script>
+</body>
+</html>
