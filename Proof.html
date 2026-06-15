@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proof — Who's Actually Scaling AI (15 June 2026)</title>
+<style>
+  :root{
+    --bg:#0e1117; --card:#161b22; --line:#2a3038; --ink:#e6edf3;
+    --muted:#9aa7b4; --accent:#3b82f6; --accent2:#22c55e; --chip:#1f2733;
+    --gold:#eab308; --amber:#f59e0b; --purple:#a855f7;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:840px; margin:0 auto; padding:34px 22px 64px;}
+  header{border-bottom:1px solid var(--line); padding-bottom:18px; margin-bottom:8px;}
+  .kicker{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700;}
+  h1{font-size:25px; margin:6px 0 4px; font-weight:800;}
+  .date{color:var(--muted); font-size:14px;}
+  .readtime{display:inline-block; margin-top:8px; font-size:12px; color:var(--muted); background:var(--chip); border:1px solid var(--line); padding:3px 10px; border-radius:20px;}
+  .nav{margin-top:12px; display:flex; flex-wrap:wrap; gap:8px;}
+  .nav a{display:inline-block; text-decoration:none; font-size:13px; font-weight:600; padding:7px 14px; border-radius:8px;}
+  .nav a.b1{background:var(--accent); color:#fff;}
+  .nav a.b2{background:var(--accent2); color:#0b140d; font-weight:700;}
+
+  .first{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--gold); border-radius:12px; padding:16px 20px; margin:24px 0 30px;}
+  .first h2{margin:0 0 10px; font-size:14px; letter-spacing:.04em; text-transform:uppercase; color:var(--gold);}
+  .first ul{margin:0; padding-left:20px;}
+  .first li{margin:8px 0; font-size:15px;}
+  .first li b{color:#fff;}
+
+  section{margin-bottom:30px;}
+  .sec-head{display:flex; align-items:center; gap:10px; margin-bottom:6px;}
+  .dot{width:10px; height:10px; border-radius:50%; background:var(--gold); flex:0 0 auto;}
+  .sec-head h2{font-size:18px; margin:0; font-weight:700;}
+  .sub{color:var(--muted); font-size:13px; margin:0 0 14px;}
+
+  .case{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:14px;}
+  .case h3{margin:0 0 2px; font-size:16px; color:#fff;}
+  .case .firmtag{color:var(--muted); font-size:12px; margin-bottom:10px;}
+  .row{display:grid; grid-template-columns:108px 1fr; gap:10px; padding:6px 0; border-top:1px solid var(--line); font-size:14px;}
+  .row:first-of-type{border-top:none;}
+  .lbl{font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); padding-top:2px;}
+  .lbl.adopt{color:#60a5fa;} .lbl.pain{color:#f87171;} .lbl.fix{color:#fbbf24;}
+  .lbl.win{color:#4ade80;} .lbl.next{color:#c084fc;}
+  .val b{color:#fff;}
+  .src{color:var(--muted); font-size:12px; text-decoration:none; border-bottom:1px dotted var(--muted);}
+  .src:hover{color:var(--accent);}
+  footer{border-top:1px solid var(--line); margin-top:36px; padding-top:16px; color:var(--muted); font-size:12.5px;}
+  a{color:var(--accent);}
+  @media(max-width:600px){ h1{font-size:21px;} .wrap{padding:24px 15px 48px;} .row{grid-template-columns:84px 1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">Daily AI Briefing &middot; Proof</div>
+    <h1>Who's Actually Scaling AI</h1>
+    <div class="date">Monday, 15 June 2026 &middot; 9:00 AM</div>
+    <div class="readtime">⏱ Quick scan &middot; real journeys with real numbers</div>
+    <div class="nav">
+      <a class="b1" href="AI-Briefing-2026-06-15.html">← Back to briefing</a>
+      <a class="b2" href="Enterprise-Adoption.html">📡 Directions radar →</a>
+    </div>
+  </header>
+
+  <div class="first">
+    <h2>⚡ Read This First</h2>
+    <ul>
+      <li><b>These are the firms past the pilot stage</b> — actual deployments at scale, with disclosed results.</li>
+      <li><b>The pattern:</b> start with an internal assistant, prove hours/dollars saved, then move to autonomous agents.</li>
+      <li><b>Banks lead</b> — JPMorgan, Bank of America and Goldman each have AI with 100,000+ staff or 10,000+ developers.</li>
+    </ul>
+  </div>
+
+  <section>
+    <div class="sec-head"><span class="dot"></span><h2>🏦 Real Journeys</h2></div>
+    <p class="sub">Each story: what they adopted, the pain before, how they fixed it, the payoff, and what's next.</p>
+
+    <div class="case">
+      <h3>JPMorgan Chase</h3>
+      <div class="firmtag">Largest US bank &middot; biggest AI program in banking</div>
+      <div class="row"><div class="lbl adopt">Adopted</div><div class="val">In-house AI assistant ("LLM Suite"), 450+ use cases, 2,000+ AI specialists.</div></div>
+      <div class="row"><div class="lbl pain">Pain before</div><div class="val">Huge manual document/contract work; knowledge scattered across the bank.</div></div>
+      <div class="row"><div class="lbl fix">How fixed</div><div class="val">Rolled the assistant to ~140,000 staff and automated contract review.</div></div>
+      <div class="row"><div class="lbl win">Payoff</div><div class="val"><b>~360,000 lawyer-hours saved a year</b>; AI now core to an $18B tech budget.</div></div>
+      <div class="row"><div class="lbl next">Next</div><div class="val">Moving from assistants to autonomous agents across more workflows.
+        <a class="src" href="https://digitaldefynd.com/IQ/jp-morgan-using-ai-case-study/">source</a></div></div>
+    </div>
+
+    <div class="case">
+      <h3>Bank of America</h3>
+      <div class="firmtag">Consumer banking at massive scale</div>
+      <div class="row"><div class="lbl adopt">Adopted</div><div class="val">"Erica" customer assistant + AI tools for nearly all employees.</div></div>
+      <div class="row"><div class="lbl pain">Pain before</div><div class="val">Overloaded call centres and IT help desks; slow developer workflows.</div></div>
+      <div class="row"><div class="lbl fix">How fixed</div><div class="val">Reached 90% employee AI adoption; Erica handles routine customer queries.</div></div>
+      <div class="row"><div class="lbl win">Payoff</div><div class="val"><b>3B+ interactions at 98% success</b>; 50%+ fewer IT calls; 20%+ developer efficiency on a $4B bet.</div></div>
+      <div class="row"><div class="lbl next">Next</div><div class="val">Deepening AI in customer service and developer tooling.
+        <a class="src" href="https://www.articsledge.com/post/ai-banking">source</a></div></div>
+    </div>
+
+    <div class="case">
+      <h3>Goldman Sachs</h3>
+      <div class="firmtag">Investment banking &middot; developer productivity</div>
+      <div class="row"><div class="lbl adopt">Adopted</div><div class="val">AI coding agent ("Devin") + firmwide generative-AI tools.</div></div>
+      <div class="row"><div class="lbl pain">Pain before</div><div class="val">Developer time eaten by routine coding, upgrades and maintenance.</div></div>
+      <div class="row"><div class="lbl fix">How fixed</div><div class="val">Rolling the coding agent toward its ~12,000 developers to work alongside them.</div></div>
+      <div class="row"><div class="lbl win">Payoff</div><div class="val"><b>~3x developer productivity expected.</b></div></div>
+      <div class="row"><div class="lbl next">Next</div><div class="val">Scaling "human + agent" teams across engineering.
+        <a class="src" href="https://lucidate.substack.com/p/goldman-sachs-scales-ai-coding-to">source</a></div></div>
+    </div>
+
+    <div class="case">
+      <h3>Citi &amp; DBS Bank</h3>
+      <div class="firmtag">Two more banks, two clear plays</div>
+      <div class="row"><div class="lbl adopt">Adopted</div><div class="val"><b>Citi:</b> agents auto-handle software patches &amp; upgrades. <b>DBS:</b> AI across customer + operations.</div></div>
+      <div class="row"><div class="lbl pain">Pain before</div><div class="val">Citi: slow, manual software maintenance. DBS: scaling service without scaling cost.</div></div>
+      <div class="row"><div class="lbl win">Payoff</div><div class="val">Citi: developers freed from grunt work. <b>DBS: ~$750M projected AI value.</b></div></div>
+      <div class="row"><div class="lbl next">Next</div><div class="val">Both expanding from pilots to bank-wide agent use.
+        <a class="src" href="https://www.ciodive.com/news/banking-ai-research-jpmorganchase-citi-rbc-wells-fargo/760901/">source</a></div></div>
+    </div>
+
+    <div class="case">
+      <h3>Accenture <span style="font-size:12px;color:var(--muted);font-weight:400;">(cross-industry example)</span></h3>
+      <div class="firmtag">How a non-bank scaled the same approach</div>
+      <div class="row"><div class="lbl adopt">Adopted</div><div class="val">Microsoft Copilot across ~200,000 employees — the largest known enterprise deployment.</div></div>
+      <div class="row"><div class="lbl win">Payoff</div><div class="val"><b>97% completed routine tasks ~15x faster</b>; 53% reported a big productivity lift.</div></div>
+      <div class="row"><div class="lbl next">Next</div><div class="val">Moving from assistants to task-specific agents per function.
+        <a class="src" href="https://www.datastudios.org/post/microsoft-copilot-case-studies-of-enterprise-ai-deployments-and-lessons-learned">source</a></div></div>
+    </div>
+  </section>
+
+  <footer>
+    Compiled automatically for Mahendran &middot; Updated with each briefing (Mon / Wed / Fri).<br>
+    Figures are the latest disclosed, not all from this week. Sources linked inline.
+  </footer>
+
+</div>
+</body>
+</html>
