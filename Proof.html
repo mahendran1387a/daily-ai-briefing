@@ -31,31 +31,41 @@
     <h2>⚡ Read this first</h2>
     <ul>
       <li><b>Evidence, not logos</b> — each entry has the actual system, how it works, a hard number, and the honest limitation.</li>
-      <li><b>What works:</b> wire AI into your own data behind the firewall, target one painful workflow, measure it.</li>
-      <li><b>The cautionary tale:</b> Klarna over-rotated to AI-only support, quality dropped, and it rehired humans — speed isn't everything.</li>
+      <li><b>The shift this month:</b> banks are moving from copilots inside walled gardens (JPM LLM Suite) to opening their platforms to <i>external</i> AI via MCP (Morgan Stanley).</li>
+      <li><b>The cautionary tale stays:</b> Klarna over-rotated to AI-only support, quality dropped, it rehired humans — speed isn't everything.</li>
     </ul>
   </div>
 
   <div id="read-controls"></div>
 
   <section class="section">
-    <article class="card readable" data-id="proof-jpmorgan-llmsuite">
-      <h3 class="case-title">JPMorgan Chase — "LLM Suite"</h3>
-      <div class="case-tag">Firm-wide AI assistant · launched 2024, scaled through 2026</div>
-      <div class="row"><div class="row-label rl-built">Built</div><div class="row-val">A <b>model-agnostic</b> in-house assistant wired into the bank's own document stores, call records and knowledge graphs via secure internal APIs.</div></div>
-      <div class="row"><div class="row-label rl-how">How it works</div><div class="row-val">Routes prompts to OpenAI and Anthropic models behind the firewall; refreshed roughly every 8 weeks; opt-in rollout.</div></div>
-      <div class="row"><div class="row-label rl-res">Results</div><div class="row-val"><b>200,000 users in 8 months</b> (now 230,000+); <b>30–40% efficiency</b> gains; <b>contract review −40%</b> in commercial lending; pitch decks drafted in ~30 seconds.</div></div>
-      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val">An assistant, not autonomy — value hinges on adoption and clean internal data; underwritten by an $18B tech budget few can match.</div></div>
-      <div class="row"><div class="row-label rl-next">Next</div><div class="row-val">Toward 1,000+ use cases and more autonomous agents. <a class="src" href="https://thedigitalbanker.com/jpmorgan-chases-llm-suite-drives-ai-transformation-across-the-enterprise/">The Digital Banker</a> · <a class="src" href="https://tearsheet.co/artificial-intelligence/jpmorgan-chases-gen-ai-implementation-450-use-cases-and-lessons-learned/">Tearsheet</a></div></div>
+    <article class="card readable" data-id="proof-morgan-stanley-mcp">
+      <h3 class="case-title">Morgan Stanley — opening the pipes to outside agents</h3>
+      <div class="case-tag">First US bank to expose core platforms to external AI via MCP · announced June 2026</div>
+      <div class="row"><div class="row-label rl-built">Built</div><div class="row-val">MCP servers in front of <b>ShareWorks</b> and <b>Equity Edge</b> — the stock-plan administration platforms that hold <b>$1.2 trillion in assets</b> across <b>~3,400 corporate clients</b>.</div></div>
+      <div class="row"><div class="row-label rl-how">How it works</div><div class="row-val">Anthropic's open <b>Model Context Protocol (MCP)</b> lets the client's <i>own</i> AI agent call MS data and workflows directly — vesting schedules, tax handling, tailored reporting — bypassing the human-facing UI.</div></div>
+      <div class="row"><div class="row-label rl-res">Results</div><div class="row-val">Live with a small early-access group; broader rollout planned across all ~3,400 administration clients by 2027.</div></div>
+      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val">No public ROI numbers yet — this is a strategic move ("be the platform agents call") rather than a measured win; also a new audit surface every regulator will want to inspect.</div></div>
+      <div class="row"><div class="row-label rl-next">Next</div><div class="row-val">Expect competitors (JPM, GS) to choose: open up via MCP or stay walled-garden. <a class="src" href="https://www.cnbc.com/2026/06/03/ai-agents-morgan-stanley-wealth-management-funnel.html">CNBC</a></div></div>
+    </article>
+
+    <article class="card readable" data-id="proof-jpmorgan-hour-agents">
+      <h3 class="case-title">JPMorgan Chase — agents that run for hours</h3>
+      <div class="case-tag">From 230K-user LLM Suite to long-running autonomy · 2026</div>
+      <div class="row"><div class="row-label rl-built">Built</div><div class="row-val">A <b>model-agnostic</b> internal assistant ("LLM Suite") wired into the bank's own documents/data via secure APIs, now layered with longer-running agents in private banking and engineering.</div></div>
+      <div class="row"><div class="row-label rl-how">How it works</div><div class="row-val">Models from OpenAI and Anthropic run behind the firewall; per chief analytics officer Derek Waldron, new agents this year will "<b>run for an hour or two</b>" on a single goal instead of a few minutes.</div></div>
+      <div class="row"><div class="row-label rl-res">Results</div><div class="row-val"><b>230,000+ users</b>, <b>30–40% efficiency</b> gains, contract review <b>−40%</b>; overnight market-screening for private bankers drove a <b>~20% gross-sales lift</b>.</div></div>
+      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val">Hour-long autonomy is still a 2H 2026 plan, not a deployed metric; underwritten by an <b>$18B tech budget</b> few peers can match.</div></div>
+      <div class="row"><div class="row-label rl-next">Next</div><div class="row-val">"Long-running autonomous agents" across corporate workflows. <a class="src" href="https://www.cnbc.com/2026/06/09/jpmorgan-chase-ai-agents.html">CNBC</a> · <a class="src" href="https://thedigitalbanker.com/jpmorgan-chases-llm-suite-drives-ai-transformation-across-the-enterprise/">The Digital Banker</a></div></div>
     </article>
 
     <article class="card readable" data-id="proof-commbank-fraud">
       <h3 class="case-title">Commonwealth Bank — agentic fraud defence</h3>
       <div class="case-tag">Australia's largest bank · in production 2026</div>
       <div class="row"><div class="row-label rl-built">Built</div><div class="row-val">An <b>agentic</b> system that spots emerging fraud patterns and <b>auto-writes the detection rules</b> to block them — built in-house in ~3 months.</div></div>
-      <div class="row"><div class="row-label rl-how">How it works</div><div class="row-val">Monitors <b>80M+ signals a day</b> across transactions, cards, payments and digital channels, then drafts/updates fraud rules for review.</div></div>
+      <div class="row"><div class="row-label rl-how">How it works</div><div class="row-val">Monitors <b>80M+ signals a day</b> across transactions, cards, payments and digital channels, then drafts/updates fraud rules for human review.</div></div>
       <div class="row"><div class="row-label rl-res">Results</div><div class="row-val"><b>Fraud losses down &gt;20%</b> (H1 FY26 vs FY25); ~40,000 proactive customer alerts/day; the agent contributed to <b>~75% of card-fraud rules</b>.</div></div>
-      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val">Part of a $1B/yr financial-crime program — and it runs alongside a separate ~$1B suspected loan-fraud probe; needs human rule-review.</div></div>
+      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val">Part of a $1B/yr financial-crime program — and runs alongside a separate ~$1B suspected loan-fraud probe; rules still need human review.</div></div>
       <div class="row"><div class="row-label rl-next">Next</div><div class="row-val">Extending agentic detection to more channels. <a class="src" href="https://www.commbank.com.au/articles/newsroom/2026/04/ai-agent-spots-fraud-in-real-time.html">CommBank newsroom</a> · <a class="src" href="https://www.finextra.com/newsarticle/47683/commbank-builds-ai-agent-that-spots-fraud-and-helps-build-defences">Finextra</a></div></div>
     </article>
 
@@ -63,10 +73,20 @@
       <h3 class="case-title">FIS + Anthropic — Financial Crimes AI agent</h3>
       <div class="case-tag">Core-banking vendor + AI lab · announced May 2026, GA H2 2026</div>
       <div class="row"><div class="row-label rl-built">Built</div><div class="row-val">An <b>agent-first</b> AML system: Anthropic's Claude reasoning embedded in FIS's banking data and regulatory infrastructure, co-built by Anthropic's forward-deployed engineers.</div></div>
-      <div class="row"><div class="row-label rl-how">How it works</div><div class="row-val">The agent assembles evidence across a bank's core systems, scores activity against known money-laundering typologies, and surfaces the highest-risk cases — with every decision traceable and client data kept inside FIS infrastructure.</div></div>
-      <div class="row"><div class="row-label rl-res">Results</div><div class="row-val">Designed to cut AML investigations from <b>hours to minutes</b>, reduce false positives and improve SAR (suspicious-activity report) narrative quality.</div></div>
-      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val">Still early — <b>BMO and Amalgamated Bank are in development</b>, with general availability only planned for H2 2026; results are design targets, not audited outcomes yet.</div></div>
+      <div class="row"><div class="row-label rl-how">How it works</div><div class="row-val">The agent assembles evidence across a bank's core systems, scores activity against money-laundering typologies, and surfaces the highest-risk cases — every decision traceable, client data stays inside FIS infrastructure.</div></div>
+      <div class="row"><div class="row-label rl-res">Results</div><div class="row-val">Designed to cut AML investigations from <b>hours to minutes</b>, reduce false positives and lift SAR (suspicious-activity report) narrative quality.</div></div>
+      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val">Still early — <b>BMO and Amalgamated Bank</b> are in development, GA only planned for H2 2026; results are design targets, not audited outcomes.</div></div>
       <div class="row"><div class="row-label rl-next">Next</div><div class="row-val">Roadmap spans credit decisioning, deposit retention, onboarding and fraud. <a class="src" href="https://www.businesswire.com/news/home/20260504126906/en/FIS-Brings-Agentic-AI-to-Banking-with-Anthropic-Starting-with-Financial-Crimes">FIS / Business Wire</a></div></div>
+    </article>
+
+    <article class="card readable" data-id="proof-goldman-anthropic-devin">
+      <h3 class="case-title">Goldman Sachs — embedded engineers + autonomous coding</h3>
+      <div class="case-tag">Investment bank · two parallel deployments</div>
+      <div class="row"><div class="row-label rl-built">Built</div><div class="row-val">Two parallel tracks: (1) Anthropic forward-deployed engineers <b>embedded for six months</b> co-developing Claude-based agents for <b>trade accounting</b> and <b>client onboarding</b>; (2) Cognition's autonomous coding agent <b>"Devin"</b> rolled out across ~12,000 developers.</div></div>
+      <div class="row"><div class="row-label rl-how">How it works</div><div class="row-val">Devin takes routine engineering work — upgrades, migrations, boilerplate — as a junior teammate that developers review; Claude agents handle middle/back-office reasoning.</div></div>
+      <div class="row"><div class="row-label rl-res">Results</div><div class="row-val"><b>~3–4x productivity expected</b> on targeted dev tasks (firm-stated, early-stage); first major bank to deploy Devin at this scale.</div></div>
+      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val">Expectations, not audited outcomes yet; the "embedded engineers" model only scales if your vendors have the bandwidth — and it concentrates IP risk in a single lab.</div></div>
+      <div class="row"><div class="row-label rl-next">Next</div><div class="row-val">Scaling "human + agent" engineering pods. <a class="src" href="https://lucidate.substack.com/p/goldman-sachs-scales-ai-coding-to">Lucidate</a></div></div>
     </article>
 
     <article class="card readable" data-id="proof-klarna-reversal">
@@ -78,22 +98,12 @@
       <div class="row"><div class="row-label rl-next">Next</div><div class="row-val">A blended model — AI for volume, humans for premium. The lesson: measure quality, not just cost. <a class="src" href="https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396">Reuters/Bloomberg via Entrepreneur</a></div></div>
     </article>
 
-    <article class="card readable" data-id="proof-goldman-devin">
-      <h3 class="case-title">Goldman Sachs — autonomous coding</h3>
-      <div class="case-tag">Investment bank · developer productivity</div>
-      <div class="row"><div class="row-label rl-built">Built</div><div class="row-val">Deploying Cognition's autonomous coding agent <b>"Devin"</b> alongside ~12,000 developers, plus firm-wide generative-AI tools.</div></div>
-      <div class="row"><div class="row-label rl-how">How it works</div><div class="row-val">Devin takes routine engineering work — upgrades, migrations, boilerplate — as a junior teammate that developers review.</div></div>
-      <div class="row"><div class="row-label rl-res">Results</div><div class="row-val"><b>~3–4x productivity expected</b> on targeted tasks (firm-stated, early-stage).</div></div>
-      <div class="row"><div class="row-label rl-catch">The catch</div><div class="row-val">An expectation, not an audited outcome yet — human review still required; gains concentrate on routine work.</div></div>
-      <div class="row"><div class="row-label rl-next">Next</div><div class="row-val">Scaling "human + agent" engineering pods. <a class="src" href="https://lucidate.substack.com/p/goldman-sachs-scales-ai-coding-to">Lucidate</a></div></div>
-    </article>
-
-    <article class="card readable" data-id="proof-menlo-benchmark">
-      <h3 class="case-title">The market reality — Menlo Ventures benchmark</h3>
-      <div class="case-tag">Survey of ~500 enterprise decision-makers · context, not a single firm</div>
-      <div class="row"><div class="row-label rl-res">Finding</div><div class="row-val">Enterprise AI spend hit <b>$37B in 2025</b> (3x year-on-year). Coding/dev tools led at <b>$7.3B</b> — about half of developers now use AI daily. AI apps are now ~6% of all software spend.</div></div>
-      <div class="row"><div class="row-label rl-catch">Why it matters</div><div class="row-val">Separates real budget from hype: money is concentrating in coding, industry-specific tools and copilots — not generic ML demos.</div></div>
-      <div class="row"><div class="row-label rl-next">Source</div><div class="row-val"><a class="src" href="https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/">Menlo Ventures — 2025 State of Generative AI in the Enterprise</a></div></div>
+    <article class="card readable" data-id="proof-stanford-hai-context">
+      <h3 class="case-title">The reality check — Stanford HAI 2026 AI Index</h3>
+      <div class="case-tag">~global cross-industry benchmark · context, not a single firm</div>
+      <div class="row"><div class="row-label rl-res">Finding</div><div class="row-val">Enterprise AI is broad but shallow: <b>88% of organisations</b> use AI in at least one function, but <b>agent deployment is still in the single digits</b> per business function. China and Europe posted the highest year-on-year adoption rises.</div></div>
+      <div class="row"><div class="row-label rl-catch">Why it matters</div><div class="row-val">The "everyone's deploying agents" headline is wrong. Most use today is documentation, summaries, code assist — augmentation, not autonomy. The gap between hype and live agents is the opportunity (and the risk).</div></div>
+      <div class="row"><div class="row-label rl-next">Source</div><div class="row-val"><a class="src" href="https://hai.stanford.edu/ai-index/2026-ai-index-report">Stanford HAI — 2026 AI Index Report</a></div></div>
     </article>
   </section>
 

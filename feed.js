@@ -1,6 +1,105 @@
 // Daily AI Briefing — running feed data. Each run APPENDS new items (dedupe by id, keep ~30 days).
 window.FEED = [
  {
+  "id": "2026-06-19-fable5-launches",
+  "date": "2026-06-19",
+  "cat": "Top AI News",
+  "title": "Claude Fable 5 launches at #1",
+  "summary": "Anthropic released Claude Fable 5 on 9 Jun — first public Mythos-class model — scoring 64.9 on the Artificial Analysis Intelligence Index, nearly 5 points ahead of GPT-5.5 (the largest gap any lab has held in a year).",
+  "src": "Artificial Analysis",
+  "url": "https://artificialanalysis.ai/articles/claude-fable-5-mythos-intelligence-index"
+ },
+ {
+  "id": "2026-06-19-fable5-export-suspended",
+  "date": "2026-06-19",
+  "cat": "Top AI News",
+  "title": "US government pulls Fable 5 globally",
+  "summary": "Three days after launch, the US Commerce Department's BIS sent Anthropic an 'Is Informed' letter (12 Jun, 5:21pm ET) requiring an export licence for any foreign-national access; Anthropic disabled Fable 5 and Mythos 5 worldwide — the first time a US lab has been ordered to shut down a model post-release.",
+  "src": "Fortune",
+  "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/"
+ },
+ {
+  "id": "2026-06-19-anthropic-recursive",
+  "date": "2026-06-19",
+  "cat": "Top AI News",
+  "title": "Anthropic: AI now writes 80% of its code",
+  "summary": "In its 4 Jun 'When AI builds itself' paper, Anthropic disclosed that 80%+ of code in its main repo is now Claude-authored, engineers commit ~8x more code/day than 2024, and Claude is delivering 52x speedups on refactor tasks — and called for a 'verifiable, multilateral' frontier slowdown.",
+  "src": "Anthropic",
+  "url": "https://www.anthropic.com/institute/recursive-self-improvement"
+ },
+ {
+  "id": "2026-06-19-jpm-hour-agents",
+  "date": "2026-06-19",
+  "cat": "Enterprise & Banking AI",
+  "title": "JPMorgan: agents that run for hours",
+  "summary": "Chief analytics officer Derek Waldron told CNBC (9 Jun) JPMorgan will deploy long-running autonomous agents this year that can work an hour or two on a single goal — overnight market screening already drove a 20% gross-sales lift in private banking.",
+  "src": "CNBC",
+  "url": "https://www.cnbc.com/2026/06/09/jpmorgan-chase-ai-agents.html"
+ },
+ {
+  "id": "2026-06-19-ms-mcp-agents",
+  "date": "2026-06-19",
+  "cat": "Enterprise & Banking AI",
+  "title": "Morgan Stanley opens its pipes to outside agents",
+  "summary": "Morgan Stanley is exposing ShareWorks and Equity Edge ($1.2T in stock-plan assets, 3,400 clients) to clients' own AI agents via MCP (Anthropic's open standard) — the first major US bank to let external agents call core platforms directly.",
+  "src": "CNBC",
+  "url": "https://www.cnbc.com/2026/06/03/ai-agents-morgan-stanley-wealth-management-funnel.html"
+ },
+ {
+  "id": "2026-06-19-gartner-demote",
+  "date": "2026-06-19",
+  "cat": "Enterprise & Banking AI",
+  "title": "Gartner: many agents will be downgraded",
+  "summary": "Gartner (26 May) said 40% of enterprises will demote or decommission autonomous agents by 2027 because they apply one-size-fits-all governance — recommending tiered controls by autonomy level instead.",
+  "src": "Gartner",
+  "url": "https://www.gartner.com/en/newsroom/press-releases/2026-05-26-gartner-says-applying-uniform-governance-across-ai-agents-will-lead-to-enterprise-ai-agent-failure"
+ },
+ {
+  "id": "2026-06-19-stargate-uae-q3",
+  "date": "2026-06-19",
+  "cat": "UAE & Middle East",
+  "title": "Stargate UAE: first 200MW lands Q3",
+  "summary": "G42's update confirms the first 200MW block of Stargate UAE — OpenAI, Oracle, NVIDIA, Cisco, SoftBank, $30B+, 1GW total in Abu Dhabi — is on track for Q3 2026 delivery, the largest AI data-centre campus outside the US.",
+  "src": "G42",
+  "url": "https://www.prnewswire.com/news-releases/g42-provides-update-on-construction-of-stargate-uae-ai-infrastructure-cluster-302586430.html"
+ },
+ {
+  "id": "2026-06-19-g42-cerebras-india",
+  "date": "2026-06-19",
+  "cat": "UAE & Middle East",
+  "title": "G42 to deploy 8 exaflops in India",
+  "summary": "G42 signed a deal (15 May) to build an 8-exaflop supercomputer in India using 64 Cerebras systems — a sovereign-AI play that bypasses Google/Microsoft and gives Abu Dhabi a stake in India's AI base.",
+  "src": "G42",
+  "url": "https://www.g42.ai/resources/news/uae-deploy-8-exaflop-supercomputer-india-strengthen-local-sovereign-ai-infrastructure"
+ },
+ {
+  "id": "2026-06-19-tml-interaction",
+  "date": "2026-06-19",
+  "cat": "Worth a Glance",
+  "title": "An AI that listens while it talks",
+  "summary": "Mira Murati's Thinking Machines (ex-OpenAI CTO) shipped TML-Interaction-Small (276B MoE, 12B active) — processes audio/video/text in 200ms chunks instead of turn-taking, replacing the 'speak then wait' model used by voice assistants today.",
+  "src": "Thinking Machines Lab",
+  "url": "https://thinkingmachines.ai/blog/interaction-models/"
+ },
+ {
+  "id": "2026-06-19-eu-ai-act-delay",
+  "date": "2026-06-19",
+  "cat": "Worth a Glance",
+  "title": "EU pushes high-risk AI rules to 2027",
+  "summary": "Under the Digital Omnibus deal (provisional, 7 May), the EU AI Act's high-risk deadline — covering credit scoring, AML and loan approval — slips from Aug 2026 to 2 Dec 2027, giving banks ~16 more months but not removing the obligation.",
+  "src": "Legal Nodes",
+  "url": "https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks"
+ },
+ {
+  "id": "2026-06-19-stanford-hai-88pct",
+  "date": "2026-06-19",
+  "cat": "Worth a Glance",
+  "title": "88% use AI, but few use agents",
+  "summary": "Stanford HAI's 2026 AI Index: 88% of organisations use AI in at least one function, but agent deployment is still in single digits across nearly every business function — adoption is wide, autonomy is shallow.",
+  "src": "Stanford HAI",
+  "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+ },
+ {
   "id": "2026-06-17-openai-files-ipo",
   "date": "2026-06-17",
   "cat": "Top AI News",

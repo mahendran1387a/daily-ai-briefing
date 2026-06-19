@@ -30,9 +30,9 @@
   <div class="lead">
     <h2>⚡ Read this first</h2>
     <ul>
-      <li><b>"Agent-first banking" is here:</b> core vendors like FIS are now shipping AI agents into the bank's own systems, starting with financial crime.</li>
-      <li><b>The real spend is on control:</b> agent software is forecast at ~$206B in 2026, but Gartner expects 40%+ of agentic projects to be scrapped — watching/governing agents is the budget that matters.</li>
-      <li><b>Your backyard:</b> the UAE and Saudi are building sovereign AI (G42's Greenshield, HUMAIN's 1GW) — a real regional alternative to US/Chinese stacks.</li>
+      <li><b>Banks are exposing their core to outside agents:</b> Morgan Stanley is opening $1.2T of stock-plan plumbing to clients' own AI via MCP — a US bank first.</li>
+      <li><b>"Hour-long" autonomy is here:</b> JPMorgan says its agents will run an hour or two on a single goal this year — the long-running autonomy bar moved.</li>
+      <li><b>Geopolitics now sets model access:</b> the US ordered Anthropic to disable Fable 5 globally three days after launch — model availability is a sanctions/export decision now.</li>
     </ul>
   </div>
 
@@ -42,25 +42,46 @@
     <div class="section-head"><h2 class="section-title">📡 The radar</h2></div>
     <p class="section-sub">Each: what it is, who's doing it (with numbers), and why it matters to you.</p>
 
+    <article class="card readable radar" data-id="ent-banks-expose-via-mcp">
+      <div class="radar-title">Banks open their core to external agents <span class="tag-new">NEW</span></div>
+      <p class="radar-what">Instead of building one chatbot, banks are exposing their platforms via MCP (Anthropic's open standard) so that the client's <i>own</i> AI agent can call the bank's data and workflows directly — like an API for autonomous software, not humans.</p>
+      <p class="radar-who">Who: Morgan Stanley is opening ShareWorks &amp; Equity Edge — <b>$1.2T in stock-plan assets, 3,400 corporate clients</b> — to external AI agents via MCP, broader rollout through 2027 (CNBC, 3 Jun).</p>
+      <span class="radar-why"><b>Why it matters to you:</b> the question shifts from "do we have a copilot?" to "are our APIs/MCP servers ready for clients' agents to call us?" — a sales channel and a risk surface at the same time. <a class="src" href="https://www.cnbc.com/2026/06/03/ai-agents-morgan-stanley-wealth-management-funnel.html">CNBC</a></span>
+    </article>
+
+    <article class="card readable radar" data-id="ent-hour-long-autonomy">
+      <div class="radar-title">Hour-long autonomous agents are shipping <span class="tag-new">NEW</span></div>
+      <p class="radar-what">The bar for "autonomy" jumps from minutes to hours: an agent now takes one goal and works through it across systems for an hour or two, only checking in for exceptions — what banks have been waiting for to put real money behind the technology.</p>
+      <p class="radar-who">Who: JPMorgan's chief analytics officer Derek Waldron (CNBC, 9 Jun): "We will have those in 2026." Overnight market-screening agents have already lifted private-banking gross sales by <b>~20%</b>.</p>
+      <span class="radar-why"><b>Why it matters to you:</b> your operational risk teams need a clear answer on supervision &amp; rollback for an agent that runs unattended for an hour — yesterday's review process won't fit. <a class="src" href="https://www.cnbc.com/2026/06/09/jpmorgan-chase-ai-agents.html">CNBC</a></span>
+    </article>
+
+    <article class="card readable radar" data-id="ent-export-controls">
+      <div class="radar-title">Model access is now a sanctions question <span class="tag-new">NEW</span></div>
+      <p class="radar-what">For the first time, the US government forced a frontier lab to shut off a publicly-launched model worldwide three days after release — model choice is no longer purely commercial; it's an export-control bet.</p>
+      <p class="radar-who">Who: US Commerce Dept's BIS sent Anthropic an "Is Informed" letter on 12 Jun for Claude Fable 5 &amp; Mythos 5; Anthropic disabled both globally within hours because it can't filter non-US users in real time (Fortune, 13 Jun).</p>
+      <span class="radar-why"><b>Why it matters to you:</b> single-vendor model strategies just got riskier for a UAE bank — a US directive can pull your stack overnight; multi-model gateways and regional sovereign options move from "nice to have" to "must have". <a class="src" href="https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/">Fortune</a></span>
+    </article>
+
     <article class="card readable radar" data-id="ent-agent-first-banking">
-      <div class="radar-title">"Agent-first" core banking from vendors <span class="tag-new">NEW</span></div>
+      <div class="radar-title">"Agent-first" core banking from vendors</div>
       <p class="radar-what">Core-banking suppliers are embedding AI agents directly into the systems banks already run — the agent assembles evidence across core systems and drafts the case, with humans reviewing.</p>
       <p class="radar-who">Who: FIS + Anthropic launched a Financial Crimes AI agent (4 Jun) that cuts AML investigations from hours to minutes; BMO and Amalgamated Bank are piloting, GA in H2 2026.</p>
-      <span class="radar-why"><b>Why it matters to you:</b> you may not have to build agents in-house — your existing vendors are shipping them into AML, onboarding and fraud. The buying decision shifts to governance and data control. <a class="src" href="https://www.businesswire.com/news/home/20260504126906/en/FIS-Brings-Agentic-AI-to-Banking-with-Anthropic-Starting-with-Financial-Crimes">FIS / Business Wire</a></span>
+      <span class="radar-why"><b>Why it matters to you:</b> your existing vendors are shipping agents into AML, onboarding and fraud — the buying decision shifts to governance and data control. <a class="src" href="https://www.businesswire.com/news/home/20260504126906/en/FIS-Brings-Agentic-AI-to-Banking-with-Anthropic-Starting-with-Financial-Crimes">FIS / Business Wire</a></span>
     </article>
 
-    <article class="card readable radar" data-id="ent-ai-finds-vulns">
-      <div class="radar-title">AI that hunts your security holes <span class="tag-new">NEW</span></div>
-      <p class="radar-what">Frontier models are now used defensively — scanning codebases to find and help patch critical vulnerabilities before attackers (who have the same tools) get there.</p>
-      <p class="radar-who">Who: Anthropic's Project Glasswing flagged 10,000+ high/critical bugs in a month across 1,000+ projects; partners include JPMorgan, AWS, Google, Microsoft — expanded to ~150 orgs on 4 Jun.</p>
-      <span class="radar-why"><b>Why it matters to you:</b> AI-assisted security testing is becoming table stakes for banks; the bottleneck is now patching speed, not finding flaws. <a class="src" href="https://www.anthropic.com/research/glasswing-initial-update">Anthropic</a></span>
+    <article class="card readable radar" data-id="ent-tiered-governance">
+      <div class="radar-title">Tiered agent governance is the next playbook <span class="tag-new">NEW</span></div>
+      <p class="radar-what">Treating all agents with the same controls breaks both ways: simple agents get over-restricted, autonomous ones get under-restricted. The fix is rating agents by autonomy level and applying controls to match — read-only assistant vs. money-moving agent get different guardrails.</p>
+      <p class="radar-who">Who: Gartner (26 May): <b>40% of enterprises will demote or decommission</b> autonomous agents by 2027 because they used uniform governance — incidents only show up in production.</p>
+      <span class="radar-why"><b>Why it matters to you:</b> a single agent-risk policy will fail audit; your AI governance committee needs an autonomy-tier model (read / advise / act / act-with-money) before scaling. <a class="src" href="https://www.gartner.com/en/newsroom/press-releases/2026-05-26-gartner-says-applying-uniform-governance-across-ai-agents-will-lead-to-enterprise-ai-agent-failure">Gartner</a></span>
     </article>
 
-    <article class="card readable radar" data-id="ent-eval-observability">
-      <div class="radar-title">Watching the agents — eval &amp; observability <span class="tag-new">HOTTEST SPEND</span></div>
-      <p class="radar-what">Tools that test agents before launch and watch them in production — needed because models give unpredictable outputs normal tests miss.</p>
-      <p class="radar-who">Who: agent software spend is forecast at ~$206.5B in 2026 (up from $86.4B), but Gartner expects 40%+ of agentic projects cancelled by 2027 and says 88% of deployments report production incidents.</p>
-      <span class="radar-why"><b>Why it matters to you:</b> in a bank the budget goes to <i>controlling</i> agents before scaling them — this is where the money and the risk actually are. <a class="src" href="https://www.gartner.com/en/newsroom/press-releases/2026-05-12-gartner-predicts-40-percent-of-organizations-deploying-ai-will-use-ai-observability-to-monitor-model-performance-by-2028">Gartner</a></span>
+    <article class="card readable radar" data-id="ent-gulf-sovereign">
+      <div class="radar-title">Gulf sovereign AI — your backyard <span class="tag-new">YOUR REGION</span></div>
+      <p class="radar-what">The Gulf is building its own AI stack — sovereign operating models and regional compute that don't depend on US or Chinese infrastructure.</p>
+      <p class="radar-who">Who: Stargate UAE (G42, OpenAI, Oracle, Nvidia, Cisco, SoftBank) — <b>1GW, $30B+</b>, first 200MW block due Q3 2026; G42 is also deploying an <b>8-exaflop Cerebras supercomputer in India</b> (15 May); Saudi HUMAIN plans ~1GW of AMD+Nvidia compute.</p>
+      <span class="radar-why"><b>Why it matters to you:</b> a FAB-relevant path — compliant, regional infrastructure and models for local banking, not just US labs. The export-control episode makes this case stronger. <a class="src" href="https://www.prnewswire.com/news-releases/g42-provides-update-on-construction-of-stargate-uae-ai-infrastructure-cluster-302586430.html">G42</a></span>
     </article>
 
     <article class="card readable radar" data-id="ent-agentic-core-banking">
@@ -70,25 +91,11 @@
       <span class="radar-why"><b>Why it matters to you:</b> the real return is autonomous operations (fraud, KYC, reconciliation, reporting), not customer chat. <a class="src" href="https://www.commbank.com.au/articles/newsroom/2026/04/ai-agent-spots-fraud-in-real-time.html">CommBank newsroom</a></span>
     </article>
 
-    <article class="card readable radar" data-id="ent-gulf-sovereign">
-      <div class="radar-title">Gulf sovereign AI — your backyard <span class="tag-new">YOUR REGION</span></div>
-      <p class="radar-what">The Gulf is building its own AI stack — sovereign operating models and regional compute that don't depend on borrowed US or Chinese infrastructure.</p>
-      <p class="radar-who">Who: Abu Dhabi's G42 launched 'Greenshield' + a Digital Embassies framework; Microsoft and G42 are adding 200MW of UAE capacity via Khazna; Saudi's HUMAIN plans ~1GW of AMD+Nvidia compute (~$10B+).</p>
-      <span class="radar-why"><b>Why it matters to you:</b> a FAB-relevant path — compliant, regional infrastructure and models for local banking, not just US labs. <a class="src" href="https://www.g42.ai/resources/news/microsoft-and-g42-accelerate-uaes-digital-future-major-data-centre-expansion">G42</a></span>
-    </article>
-
-    <article class="card readable radar" data-id="ent-human-on-loop">
-      <div class="radar-title">"Human-on-the-loop" (not in-the-loop)</div>
-      <p class="radar-what">Agents run on their own; people supervise via dashboards and alerts, stepping in only for exceptions — rather than approving every step.</p>
-      <p class="radar-who">Who: emerging as the default oversight model across enterprise agent platforms, tied to the eval/observability build-out above.</p>
-      <span class="radar-why"><b>Why it matters to you:</b> it reshapes the org chart — fewer approvers, more monitors — and is a governance decision, not a tool purchase. <a class="src" href="https://bytebridge.medium.com/from-human-in-the-loop-to-human-on-the-loop-evolving-ai-agent-autonomy-c0ae62c3bf91">ByteBridge</a></span>
-    </article>
-
     <article class="card readable radar" data-id="ent-rollbacks">
       <div class="radar-title">The counter-trend: quality over speed ⚠️</div>
-      <p class="radar-what">After the rush, firms are pausing or trimming agents once cost, risk and unclear value get scrutinised — and 88% of agent deployments report production incidents.</p>
-      <p class="radar-who">Who: Klarna is the marquee reversal — it ran AI-only support then rehired humans for complex cases after quality slipped.</p>
-      <span class="radar-why"><b>Why it matters to you:</b> don't chase hype — pick a few high-value workflows, prove ROI, then scale. <a class="src" href="https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396">Reuters/Bloomberg via Entrepreneur</a></span>
+      <p class="radar-what">After the rush, firms are pausing or trimming agents once cost, risk and unclear value get scrutinised — adoption is wide (88% of orgs use AI) but agent <i>deployment</i> is still in single digits per business function (Stanford HAI 2026 Index).</p>
+      <p class="radar-who">Who: Klarna remains the marquee reversal — it ran AI-only support then rehired humans for complex cases after quality slipped; the EU has also pushed its AI Act high-risk deadline from Aug 2026 to Dec 2027 (Digital Omnibus, 7 May) — buying banks 16 more months.</p>
+      <span class="radar-why"><b>Why it matters to you:</b> don't chase hype — pick a few high-value workflows, prove ROI with hard metrics, then scale. <a class="src" href="https://hai.stanford.edu/ai-index/2026-ai-index-report">Stanford HAI</a></span>
     </article>
   </section>
 
