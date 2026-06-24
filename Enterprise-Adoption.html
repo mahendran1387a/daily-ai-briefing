@@ -30,9 +30,9 @@
   <div class="lead">
     <h2>⚡ Read this first</h2>
     <ul>
-      <li><b>Issuer banks are wiring up for agent-initiated payments:</b> Visa's Agentic Ready programme has signed up ADCB, ADIB, Emirates NBD, Emirates Islamic and Mashreq to let AI agents complete transactions on customers' behalf.</li>
-      <li><b>Single-vendor AI just got more dangerous:</b> the Pentagon shifted two-thirds of its AI workload off Anthropic; days earlier Anthropic disabled Fable 5 globally under a US export directive — your lab choice is a procurement risk now.</li>
-      <li><b>Capability follows people:</b> AlphaFold Nobel laureate John Jumper to Anthropic, Gemini co-lead Noam Shazeer to OpenAI — two weeks, two consequential moves. Which lab leads in 18 months is a talent question, not just a compute one.</li>
+      <li><b>A federal AI regulator just landed at home:</b> Sheikh Mohammed approved the UAE Federal Authority for AI and Data on 14 Jun — every bank's AI roadmap now has one named addressee, and DIFC is consulting on AI-specific data-protection rules until 18 Jul.</li>
+      <li><b>The card networks just plumbed in agents:</b> Visa+OpenAI (10 Jun) puts tokenised Visa rails inside ChatGPT; Mastercard's Agent Pay for Machines launched the same day with Stripe, Adyen, Checkout.com and Ant International on the list — issuer banks now sit between two competing agent-commerce stacks.</li>
+      <li><b>Compute is concentrating:</b> Micron-Anthropic's 4-pillar deal (22 Jun) locks 1 of 3 global HBM makers to a single lab; HSBC+Google Cloud (17 Jun) commits to 200 use cases on Gemini. The bigger your AI deal, the harder the lab/cloud switch later.</li>
     </ul>
   </div>
 
@@ -42,25 +42,39 @@
     <div class="section-head"><h2 class="section-title">📡 The radar</h2></div>
     <p class="section-sub">Each: what it is, who's doing it (with numbers), and why it matters to you.</p>
 
-    <article class="card readable radar" data-id="ent-agentic-payments-uae">
-      <div class="radar-title">Agent-initiated payments arrive at the issuer <span class="tag-new">NEW · YOUR REGION</span></div>
-      <p class="radar-what">Payment rails are being re-plumbed so a customer's own AI agent can place an order and authorise the transaction with the issuer in the loop — not a chatbot on the merchant side, but agentic checkout sanctioned by the bank itself.</p>
-      <p class="radar-who">Who: Visa's Agentic Ready programme in UAE — issuer participants include <b>ADCB, ADIB, Emirates NBD, Emirates Islamic, Mashreq</b>, plus Tabby, Wio, Ziina and Al Ansari Exchange (May–Jun 2026). Visa says <b>~60% of UAE businesses</b> are actively exploring agentic commerce.</p>
-      <span class="radar-why"><b>Why it matters to you:</b> FAB will be asked &quot;are you in?&quot; — being absent from the issuer list while peers are listed is a competitive signal; the controls (auth, dispute, limits) for agent-initiated transactions need a policy decision now. <a class="src" href="https://www.zawya.com/en/business/banking-and-insurance/visa-launches-agentic-ready-programme-in-uae-mwbub6lj">Zawya</a></span>
+    <article class="card readable radar" data-id="ent-uae-ai-authority">
+      <div class="radar-title">A single UAE AI regulator now exists <span class="tag-new">NEW · YOUR REGION</span></div>
+      <p class="radar-what">Sheikh Mohammed approved (14 Jun) the Federal Authority for Artificial Intelligence and Data — one body absorbing three prior entities and reporting to the Cabinet. It owns national AI policy, the data-platform layer, and the digital-government strategy. Crown-Prince-level message: &quot;a government that runs on data and agentic AI.&quot;</p>
+      <p class="radar-who">Who: Federal-level, led by Omar Sultan Al Olama (Minister of State for AI). DIFC is also out for consultation (until <b>18 Jul</b>) on amended Data-Protection Regs that formalise an <b>Autonomous Systems Officer</b> role for systems processing personal data with AI.</p>
+      <span class="radar-why"><b>Why it matters to you:</b> the FAB AI register now has a single regulator to map to — and an AI-specific officer role to staff before DIFC rules go live. Procurement contracts written before this consolidation may need addenda. <a class="src" href="https://www.mediaoffice.ae/en/news/2026/jun/12-06/mohammed-bin-rashid-approves-establishing-artificial-intelligence-and-data-authority">UAE Media Office</a> · <a class="src" href="https://www.zawya.com/en/press-release/companies-news/difc-announces-consultation-of-amended-difc-data-protection-regulations-uoenwbtr">DIFC / Zawya</a></span>
     </article>
 
-    <article class="card readable radar" data-id="ent-single-vendor-risk">
-      <div class="radar-title">Single-vendor AI is now a procurement risk <span class="tag-new">NEW</span></div>
-      <p class="radar-what">In two weeks, two big customers walked away from a single lab: the US Commerce Dept disabled Anthropic's Fable 5 globally (12 Jun), and the Pentagon formalised a multi-vendor strategy with OpenAI, Google and Microsoft — Anthropic excluded. Concentration risk on a model vendor is no longer theoretical.</p>
-      <p class="radar-who">Who: DoD has shifted <b>~two-thirds of its AI workload</b> off Anthropic after a use-policy dispute and stood up classified-network contracts with the other three; the Anthropic <b>$200M July 2025 contract</b> is partly cancelled (Federal News Network).</p>
-      <span class="radar-why"><b>Why it matters to you:</b> the architecture answer for any large enterprise is now multi-model gateways (Portkey/Credal/Kong) with portable prompts, not one preferred lab — and your vendor due-diligence list needs an export-control question. <a class="src" href="https://en.wikipedia.org/wiki/Anthropic%E2%80%93United_States_Department_of_Defense_dispute">Anthropic–DoD dispute</a></span>
+    <article class="card readable radar" data-id="ent-agent-card-rails">
+      <div class="radar-title">Agent-commerce splits into two card stacks <span class="tag-new">NEW</span></div>
+      <p class="radar-what">In a single week, the global card networks shipped competing agent-payments infrastructure. Visa+OpenAI put Visa's tokenised credentials inside ChatGPT and added Agent Scoring, an Agentic Registry and a 'Large Transaction Model' (10 Jun). Mastercard launched <b>Agent Pay for Machines (AP4M)</b> the same day, with multi-rail settlement across cards, accounts and stablecoins.</p>
+      <p class="radar-who">Who: Mastercard's launch list includes <b>Stripe, Adyen, Checkout.com, Coinbase, Cloudflare, Ant International, Santander/Getnet, Ripple, Solana Foundation</b>. Visa's UAE Agentic-Ready issuer list (22 Jun) includes ADCB, ADIB, Emirates NBD, Emirates Islamic, Mashreq, Wio, Tabby, Ziina, Al Ansari Exchange.</p>
+      <span class="radar-why"><b>Why it matters to you:</b> issuers can no longer treat 'agent-initiated' as one decision — Visa-via-ChatGPT and Mastercard's AP4M have different identity, scoring and settlement primitives. Pick the agent-routing policy before merchants start asking. <a class="src" href="https://investor.visa.com/news/news-details/2026/Visa-Partners-with-OpenAI-to-Power-the-Next-Generation-of-AI-Commerce/default.aspx">Visa</a> · <a class="src" href="https://www.mastercard.com/us/en/news-and-trends/press/2026/june/mastercard-launches-agent-pay-for-machines.html">Mastercard</a></span>
     </article>
 
-    <article class="card readable radar" data-id="ent-talent-gravity">
-      <div class="radar-title">Talent gravity is the leading indicator <span class="tag-new">NEW</span></div>
-      <p class="radar-what">Where the people go tells you where capability lands 12–18 months later — and the people are concentrating. In the last six weeks: Karpathy → Anthropic, Jumper (AlphaFold Nobel) → Anthropic, Shazeer (Transformer co-author, Gemini co-lead) → OpenAI.</p>
-      <p class="radar-who">Who: Jumper announced 19 Jun after 9 yrs at DeepMind; Shazeer announced 18 Jun two years after Google paid <b>~$2.7B</b> to bring him back via CharacterAI. Karpathy joined Anthropic's pre-training team earlier in May.</p>
-      <span class="radar-why"><b>Why it matters to you:</b> your &quot;preferred LLM&quot; choice in a 3-year contract is partly a bet on whose research stays on top — make the contract terms (price-protection, capability-tier swap rights) reflect that uncertainty. <a class="src" href="https://thenextweb.com/news/john-jumper-nobel-deepmind-leaves-anthropic-alphafold">TheNextWeb</a></span>
+    <article class="card readable radar" data-id="ent-compute-lock-in">
+      <div class="radar-title">Compute is the new lock-in layer <span class="tag-new">NEW</span></div>
+      <p class="radar-what">The week's big AI deals weren't models — they were the layers underneath. Micron+Anthropic (22 Jun) is a four-pillar deal: jointly designing memory architectures for AI, multi-year HBM/storage supply, internal Claude deployment, and Micron money into Anthropic's Series H. HSBC+Google Cloud (17 Jun) commits HSBC to Gemini + the Gemini Enterprise Agent Platform for 200+ use cases.</p>
+      <p class="radar-who">Who: Micron is <b>one of only three HBM makers on Earth</b>; HSBC monitors <b>~1B transactions/month</b> and expects 2x faster financial-crime intervention; several individual use cases projected >$100M each.</p>
+      <span class="radar-why"><b>Why it matters to you:</b> your model choice now drags compute and cloud with it — the cost of switching labs in 2–3 years is rising fast. Build exit clauses (data portability, prompt portability, capability-tier swap) into multi-year deals now. <a class="src" href="https://investors.micron.com/news-releases/news-release-details/micron-and-anthropic-announce-strategic-agreement-scale-next">Micron</a> · <a class="src" href="https://www.hsbc.com/news-and-views/news/media-releases/2026/hsbc-and-google-cloud-announce-transformative-ai-banking-partnership">HSBC</a></span>
+    </article>
+
+    <article class="card readable radar" data-id="ent-autopilot-agents">
+      <div class="radar-title">'Autopilot' agents arrive in productivity suites <span class="tag-new">NEW</span></div>
+      <p class="radar-what">Microsoft Scout (2 Jun) is the first 'Autopilot' agent — always-on, runs under its own Entra identity, learns from your activity via Work IQ, and acts across Teams/Outlook/OneDrive/SharePoint without prompts. The agent has its <i>own</i> identity, not a shared service account — a governance shift, not a UX one.</p>
+      <p class="radar-who">Who: Microsoft (experimental via Frontier today; public preview Aug 2026); Google countered with the Gemini Enterprise Agent Platform housing partner-built agents from Adobe, Atlassian, Salesforce, ServiceNow, Workday in an Agent Gallery.</p>
+      <span class="radar-why"><b>Why it matters to you:</b> an always-on agent with its own AD identity changes how you audit, license and de-provision — Entra/IAM policy needs an 'agent identity' class before Aug. Don't pilot Scout under a person's account. <a class="src" href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/">Microsoft</a></span>
+    </article>
+
+    <article class="card readable radar" data-id="ent-mea-ai-banking">
+      <div class="radar-title">UAE banks lead a new MEA AI index <span class="tag-new">YOUR REGION</span></div>
+      <p class="radar-what">Evident published its first AI Index for MEA banks (Jun): Emirates NBD, Standard Bank, FAB and Nedbank are top-4 across 25 banks scored on Transparency, Leadership, Innovation and Talent. 5 of 6 South African banks made the top 10 — heavy AI talent + central-bank alignment.</p>
+      <p class="radar-who">Who: Evident Insights (4th edition globally; first MEA cut). Separately Mashreq is publicly committed to a 2026 'agent factory' on its ACEE framework (corporate/retail/private banking).</p>
+      <span class="radar-why"><b>Why it matters to you:</b> FAB sits #3 on the inaugural MEA index — the playbook to overtake ENBD is the four-pillar Evident framework, which is now your scoring rubric in board reviews. <a class="src" href="https://evidentinsights.com/insights/2026-evident-ai-index-for-banks-mea-key-findings-report">Evident MEA Index</a></span>
     </article>
 
     <article class="card readable radar" data-id="ent-banks-expose-via-mcp">
@@ -77,23 +91,9 @@
       <span class="radar-why"><b>Why it matters to you:</b> your operational risk teams need a clear answer on supervision &amp; rollback for an agent that runs unattended for an hour — yesterday's review process won't fit. <a class="src" href="https://www.cnbc.com/2026/06/09/jpmorgan-chase-ai-agents.html">CNBC</a></span>
     </article>
 
-    <article class="card readable radar" data-id="ent-tiered-governance">
-      <div class="radar-title">Tiered agent governance is the next playbook</div>
-      <p class="radar-what">Treating all agents with the same controls breaks both ways: simple agents get over-restricted, autonomous ones get under-restricted. The fix is rating agents by autonomy level and applying controls to match — read-only assistant vs. money-moving agent get different guardrails.</p>
-      <p class="radar-who">Who: Gartner (26 May): <b>40% of enterprises will demote or decommission</b> autonomous agents by 2027 because they used uniform governance — incidents only show up in production.</p>
-      <span class="radar-why"><b>Why it matters to you:</b> a single agent-risk policy will fail audit; your AI governance committee needs an autonomy-tier model (read / advise / act / act-with-money) before scaling. <a class="src" href="https://www.gartner.com/en/newsroom/press-releases/2026-05-26-gartner-says-applying-uniform-governance-across-ai-agents-will-lead-to-enterprise-ai-agent-failure">Gartner</a></span>
-    </article>
-
-    <article class="card readable radar" data-id="ent-gulf-sovereign">
-      <div class="radar-title">Gulf sovereign AI — your backyard <span class="tag-new">YOUR REGION</span></div>
-      <p class="radar-what">The Gulf is building its own AI stack — sovereign operating models and regional compute that don't depend on US or Chinese infrastructure.</p>
-      <p class="radar-who">Who: Stargate UAE (G42, OpenAI, Oracle, Nvidia, Cisco, SoftBank) — <b>1GW, $30B+</b>, first 200MW block due Q3 2026, ~35,000 Nvidia GB300s. Saudi: stc + HUMAIN extended their <b>1GW JV MoU</b> by 6 months (Tadawul 18 Jun); HUMAIN holds 51%, stc 49%. G42 is also deploying an <b>8-exaflop Cerebras supercomputer in India</b>.</p>
-      <span class="radar-why"><b>Why it matters to you:</b> a FAB-relevant path — compliant, regional infrastructure for local banking. The export-control episode makes this case stronger. <a class="src" href="https://www.prnewswire.com/news-releases/g42-provides-update-on-construction-of-stargate-uae-ai-infrastructure-cluster-302586430.html">G42</a> · <a class="src" href="https://www.arabnews.com/node/2647674/business-economy">Arab News</a></span>
-    </article>
-
     <article class="card readable radar" data-id="ent-rollbacks">
       <div class="radar-title">The counter-trend: quality over speed ⚠️</div>
-      <p class="radar-what">After the rush, firms are pausing or trimming agents once cost, risk and unclear value get scrutinised — adoption is wide (88% of orgs use AI) but agent <i>deployment</i> is still in single digits per business function (Stanford HAI 2026 Index).</p>
+      <p class="radar-what">After the rush, firms are pausing or trimming agents once cost, risk and unclear value get scrutinised — adoption is wide (88% of orgs use AI) but agent <i>deployment</i> is still in single digits per business function (Stanford HAI 2026 Index). Gartner (26 May) expects <b>40% of enterprises to demote or decommission</b> autonomous agents by 2027.</p>
       <p class="radar-who">Who: Klarna remains the marquee reversal — it ran AI-only support then rehired humans for complex cases after quality slipped; the EU has also pushed its AI Act high-risk deadline from Aug 2026 to Dec 2027 (Digital Omnibus, 7 May) — banks get 16 more months.</p>
       <span class="radar-why"><b>Why it matters to you:</b> don't chase hype — pick a few high-value workflows, prove ROI with hard metrics, then scale. <a class="src" href="https://hai.stanford.edu/ai-index/2026-ai-index-report">Stanford HAI</a></span>
     </article>

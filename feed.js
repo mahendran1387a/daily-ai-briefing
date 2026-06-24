@@ -1,6 +1,96 @@
 // Daily AI Briefing — running feed data. Each run APPENDS new items (dedupe by id, keep ~30 days).
 window.FEED = [
  {
+  "id": "2026-06-24-micron-anthropic",
+  "date": "2026-06-24",
+  "cat": "Top AI News",
+  "title": "Micron + Anthropic strike a 4-pillar deal",
+  "summary": "Micron and Anthropic announced (22 Jun) a four-layer strategic agreement: joint HBM/storage architecture co-design, a multi-year data-centre supply contract, firm-wide Claude deployment inside Micron, and a Micron investment in Anthropic's Series H — locks one of only three HBM makers on Earth into Anthropic's roadmap.",
+  "src": "Micron / PR Newswire",
+  "url": "https://investors.micron.com/news-releases/news-release-details/micron-and-anthropic-announce-strategic-agreement-scale-next"
+ },
+ {
+  "id": "2026-06-24-samsung-chatgpt-codex",
+  "date": "2026-06-24",
+  "cat": "Enterprise & Banking AI",
+  "title": "Samsung rolls out ChatGPT + Codex group-wide",
+  "summary": "Samsung Electronics is deploying ChatGPT Enterprise and Codex to all Korea employees plus its global Device eXperience (DX) division (announced 21 Jun) — one of OpenAI's largest enterprise rollouts; Codex weekly active users in Korea are already up ~800% since 1 Feb.",
+  "src": "OpenAI",
+  "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment/"
+ },
+ {
+  "id": "2026-06-24-hsbc-google-cloud",
+  "date": "2026-06-24",
+  "cat": "Enterprise & Banking AI",
+  "title": "HSBC bets big on Google Cloud + Gemini",
+  "summary": "HSBC and Google Cloud signed a multi-year agentic-AI partnership (17 Jun, Google Cloud Summit London) — 200+ AI use cases over 2 years, several individually projected >$100M; financial-crime workflows expected to intervene 2x faster across ~1 billion monthly transactions monitored.",
+  "src": "HSBC",
+  "url": "https://www.hsbc.com/news-and-views/news/media-releases/2026/hsbc-and-google-cloud-announce-transformative-ai-banking-partnership"
+ },
+ {
+  "id": "2026-06-24-uae-ai-authority",
+  "date": "2026-06-24",
+  "cat": "UAE & Middle East",
+  "title": "UAE sets up a Federal AI + Data Authority",
+  "summary": "Sheikh Mohammed approved (14 Jun) the Federal Authority for Artificial Intelligence and Data — one body for AI, data and digital-government policy, reporting to the Cabinet, led by Omar Sultan Al Olama; consolidates three prior entities and owns the national AI strategy.",
+  "src": "Khaleej Times / UAE Media Office",
+  "url": "https://www.mediaoffice.ae/en/news/2026/jun/12-06/mohammed-bin-rashid-approves-establishing-artificial-intelligence-and-data-authority"
+ },
+ {
+  "id": "2026-06-24-difc-ai-data-rules",
+  "date": "2026-06-24",
+  "cat": "UAE & Middle East",
+  "title": "DIFC opens AI data-rules for comment",
+  "summary": "DIFC put amended Data Protection Regulations out to 30-day public consultation (closes 18 Jul) — adds explicit obligations for systems processing personal data with AI, formalises an Autonomous Systems Officer role, and gives the Commissioner power to recognise external accreditation schemes; positions DIFC as 'AI-native' financial centre.",
+  "src": "DIFC / Zawya",
+  "url": "https://www.zawya.com/en/press-release/companies-news/difc-announces-consultation-of-amended-difc-data-protection-regulations-uoenwbtr"
+ },
+ {
+  "id": "2026-06-24-enbd-rbl-close",
+  "date": "2026-06-24",
+  "cat": "UAE & Middle East",
+  "title": "Emirates NBD closes $2.75B RBL deal",
+  "summary": "Emirates NBD completed (18 Jun) its $2.75B primary-equity acquisition of a 60% stake in India's RBL Bank — the largest foreign direct investment in Indian banking history and first foreign-bank majority take of a profitable Indian lender; ENBD folds in its existing India branches and seats 5 directors incl. Group CEO Shayne Nelson.",
+  "src": "Gulf News",
+  "url": "https://gulfnews.com/amp/story/business/banking/emirates-nbd-completes-275-billion-rbl-bank-deal-takes-60-stake-1.500578382"
+ },
+ {
+  "id": "2026-06-24-visa-openai-commerce",
+  "date": "2026-06-24",
+  "cat": "Top AI News",
+  "title": "Visa wires payments into ChatGPT",
+  "summary": "Visa + OpenAI announced an agentic-commerce partnership (10 Jun, Visa Payments Forum SF) putting Visa's tokenised credentials inside ChatGPT and adding Agent Scoring, an Agentic Registry and a 'Large Transaction Model' so agent-initiated transactions are auditable and routable through existing card rails.",
+  "src": "Visa",
+  "url": "https://investor.visa.com/news/news-details/2026/Visa-Partners-with-OpenAI-to-Power-the-Next-Generation-of-AI-Commerce/default.aspx"
+ },
+ {
+  "id": "2026-06-24-mastercard-agent-pay",
+  "date": "2026-06-24",
+  "cat": "Top AI News",
+  "title": "Mastercard launches 'Agent Pay for Machines'",
+  "summary": "Mastercard unveiled Agent Pay for Machines (AP4M, 10 Jun) — a protocol for continuous agent-to-agent microtransactions with multi-rail settlement across cards, bank accounts and stablecoins; launch list includes Stripe, Adyen, Checkout.com, Coinbase, Cloudflare, Ant International and Santander's Getnet.",
+  "src": "Mastercard",
+  "url": "https://www.mastercard.com/us/en/news-and-trends/press/2026/june/mastercard-launches-agent-pay-for-machines.html"
+ },
+ {
+  "id": "2026-06-24-microsoft-scout",
+  "date": "2026-06-24",
+  "cat": "Top AI News",
+  "title": "Microsoft Scout: always-on 'Autopilot' agent",
+  "summary": "Microsoft launched 'Scout' on 2 Jun — its first 'Autopilot' agent: always-on, runs under its own Entra identity, learns from your work via Work IQ and acts across Teams/Outlook/OneDrive/SharePoint without prompts; experimental via Frontier today, public preview Aug 2026.",
+  "src": "Microsoft",
+  "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/"
+ },
+ {
+  "id": "2026-06-24-china-295b-grid",
+  "date": "2026-06-24",
+  "cat": "Worth a Glance",
+  "title": "China drafts a $295B national AI grid",
+  "summary": "Bloomberg revealed (9 Jun) China's NDRC plan: a 5-year, ~$295B project to unify thousands of data centres into one national compute grid by 2028, mandating ≥80% domestic chips (Huawei, Biren, Moore Threads) — funded via sovereign and ultra-long bonds; total spend incl. grid integration could reach ~$740B.",
+  "src": "Bloomberg",
+  "url": "https://www.bloomberg.com/news/newsletters/2026-06-12/china-s-ai-infrastructure-plan-295-billion-project-to-challenge-us"
+ },
+ {
   "id": "2026-06-22-visa-agentic-uae",
   "date": "2026-06-22",
   "cat": "UAE & Middle East",
